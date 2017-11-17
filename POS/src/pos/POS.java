@@ -16,6 +16,8 @@ public class POS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        POSGUI myGUI = new POSGUI();
+        myGUI.setVisible(true);
     }
     
 }
