@@ -27,71 +27,50 @@ public class BarGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        barLbl = new javax.swing.JLabel();
-        beerLbl = new javax.swing.JLabel();
-        ciderLbl = new javax.swing.JLabel();
-        heinekenBtn = new javax.swing.JButton();
-        orchardBtn = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
         guinnessLbl = new javax.swing.JButton();
         carlsbergLbl = new javax.swing.JButton();
-        bulmersBtn = new javax.swing.JButton();
-        kopparbergBtn = new javax.swing.JButton();
-        rumBtn = new javax.swing.JButton();
-        spiritsLbl = new javax.swing.JLabel();
-        foodLbl = new javax.swing.JLabel();
-        vodkaBtn = new javax.swing.JButton();
-        ginBtn = new javax.swing.JButton();
-        whiskeyBtn = new javax.swing.JButton();
-        tequilaBtn = new javax.swing.JButton();
-        wineLbl = new javax.swing.JLabel();
-        fantaBtn = new javax.swing.JButton();
-        whiteBtn = new javax.swing.JButton();
-        redBtn = new javax.swing.JButton();
-        softLbl = new javax.swing.JLabel();
-        cokeBtn = new javax.swing.JButton();
-        changeBtn = new javax.swing.JButton();
-        spriteBtn = new javax.swing.JButton();
-        dietcBtn = new javax.swing.JButton();
-        pepsiBtn = new javax.swing.JButton();
-        burgerBtn = new javax.swing.JButton();
         hotdBtn = new javax.swing.JButton();
+        wineLbl = new javax.swing.JLabel();
+        cokeBtn = new javax.swing.JButton();
         chipsBtn = new javax.swing.JButton();
-        tcostLbl = new javax.swing.JLabel();
-        tcostTF = new javax.swing.JTextField();
-        clearBtn = new javax.swing.JButton();
+        changeBtn = new javax.swing.JButton();
+        pepsiBtn = new javax.swing.JButton();
         amountTF = new javax.swing.JTextField();
+        ciderLbl = new javax.swing.JLabel();
+        tequilaBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
+        rumBtn = new javax.swing.JButton();
+        tcostTF = new javax.swing.JTextField();
+        dietcBtn = new javax.swing.JButton();
+        bulmersBtn = new javax.swing.JButton();
+        foodLbl = new javax.swing.JLabel();
+        kopparbergBtn = new javax.swing.JButton();
+        ginBtn = new javax.swing.JButton();
+        spriteBtn = new javax.swing.JButton();
+        orchardBtn = new javax.swing.JButton();
+        softLbl = new javax.swing.JLabel();
+        spiritsLbl = new javax.swing.JLabel();
+        fantaBtn = new javax.swing.JButton();
+        tcostLbl = new javax.swing.JLabel();
+        vodkaBtn = new javax.swing.JButton();
+        burgerBtn = new javax.swing.JButton();
         amountLbl = new javax.swing.JLabel();
+        whiskeyBtn = new javax.swing.JButton();
+        heinekenBtn = new javax.swing.JButton();
+        redBtn = new javax.swing.JButton();
+        whiteBtn = new javax.swing.JButton();
+        beerLbl = new javax.swing.JLabel();
+        barLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(880, 2300));
 
-        barLbl.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        barLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        barLbl.setText("Bar");
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 1000));
 
-        beerLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        beerLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        beerLbl.setText("Beer");
-
-        ciderLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        ciderLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ciderLbl.setText("Cider");
-
-        heinekenBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        heinekenBtn.setText("Heineken");
-        heinekenBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                heinekenBtnActionPerformed(evt);
-            }
-        });
-
-        orchardBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        orchardBtn.setText("Orchard Thieves");
-        orchardBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orchardBtnActionPerformed(evt);
-            }
-        });
+        jPanel1.setPreferredSize(new java.awt.Dimension(880, 2500));
 
         guinnessLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         guinnessLbl.setText("Guinness");
@@ -109,67 +88,11 @@ public class BarGUI extends javax.swing.JFrame {
             }
         });
 
-        bulmersBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        bulmersBtn.setText("Bulmers");
-        bulmersBtn.addActionListener(new java.awt.event.ActionListener() {
+        hotdBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        hotdBtn.setText("Hot Dog");
+        hotdBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bulmersBtnActionPerformed(evt);
-            }
-        });
-
-        kopparbergBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        kopparbergBtn.setText("Kopparberg");
-        kopparbergBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kopparbergBtnActionPerformed(evt);
-            }
-        });
-
-        rumBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        rumBtn.setText("Rum");
-        rumBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rumBtnActionPerformed(evt);
-            }
-        });
-
-        spiritsLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        spiritsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        spiritsLbl.setText("Spirits");
-
-        foodLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        foodLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        foodLbl.setText("Food");
-
-        vodkaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        vodkaBtn.setText("Vodka");
-        vodkaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vodkaBtnActionPerformed(evt);
-            }
-        });
-
-        ginBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ginBtn.setText("Gin");
-        ginBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ginBtnActionPerformed(evt);
-            }
-        });
-
-        whiskeyBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        whiskeyBtn.setText("Whiskey");
-        whiskeyBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                whiskeyBtnActionPerformed(evt);
-            }
-        });
-
-        tequilaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        tequilaBtn.setText("Tequila");
-        tequilaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tequilaBtnActionPerformed(evt);
+                hotdBtnActionPerformed(evt);
             }
         });
 
@@ -177,87 +100,11 @@ public class BarGUI extends javax.swing.JFrame {
         wineLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         wineLbl.setText("Wine");
 
-        fantaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        fantaBtn.setText("Fanta");
-        fantaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fantaBtnActionPerformed(evt);
-            }
-        });
-
-        whiteBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        whiteBtn.setText("White wine");
-        whiteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                whiteBtnActionPerformed(evt);
-            }
-        });
-
-        redBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        redBtn.setText("Red wine");
-        redBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                redBtnActionPerformed(evt);
-            }
-        });
-
-        softLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
-        softLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        softLbl.setText("Soft Drinks");
-
         cokeBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cokeBtn.setText("Coke");
         cokeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cokeBtnActionPerformed(evt);
-            }
-        });
-
-        changeBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        changeBtn.setText("Calculate Change");
-        changeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeBtnActionPerformed(evt);
-            }
-        });
-
-        spriteBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        spriteBtn.setText("Sprite");
-        spriteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spriteBtnActionPerformed(evt);
-            }
-        });
-
-        dietcBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        dietcBtn.setText("Diet Coke");
-        dietcBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dietcBtnActionPerformed(evt);
-            }
-        });
-
-        pepsiBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        pepsiBtn.setText("Pepsi");
-        pepsiBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pepsiBtnActionPerformed(evt);
-            }
-        });
-
-        burgerBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        burgerBtn.setText("Burger");
-        burgerBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                burgerBtnActionPerformed(evt);
-            }
-        });
-
-        hotdBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        hotdBtn.setText("Hot Dog");
-        hotdBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hotdBtnActionPerformed(evt);
             }
         });
 
@@ -269,8 +116,36 @@ public class BarGUI extends javax.swing.JFrame {
             }
         });
 
-        tcostLbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tcostLbl.setText("Total Cost:");
+        changeBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        changeBtn.setText("Calculate Change");
+        changeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeBtnActionPerformed(evt);
+            }
+        });
+
+        pepsiBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        pepsiBtn.setText("Pepsi");
+        pepsiBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pepsiBtnActionPerformed(evt);
+            }
+        });
+
+        amountTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        amountTF.setText("Enter amount");
+
+        ciderLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        ciderLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ciderLbl.setText("Cider");
+
+        tequilaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        tequilaBtn.setText("Tequila");
+        tequilaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tequilaBtnActionPerformed(evt);
+            }
+        });
 
         clearBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         clearBtn.setText("Clear");
@@ -280,165 +155,318 @@ public class BarGUI extends javax.swing.JFrame {
             }
         });
 
-        amountTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        amountTF.setText("Enter amount");
+        rumBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        rumBtn.setText("Rum");
+        rumBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rumBtnActionPerformed(evt);
+            }
+        });
+
+        dietcBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        dietcBtn.setText("Diet Coke");
+        dietcBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dietcBtnActionPerformed(evt);
+            }
+        });
+
+        bulmersBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bulmersBtn.setText("Bulmers");
+        bulmersBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bulmersBtnActionPerformed(evt);
+            }
+        });
+
+        foodLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        foodLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        foodLbl.setText("Food");
+
+        kopparbergBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        kopparbergBtn.setText("Kopparberg");
+        kopparbergBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kopparbergBtnActionPerformed(evt);
+            }
+        });
+
+        ginBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ginBtn.setText("Gin");
+        ginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ginBtnActionPerformed(evt);
+            }
+        });
+
+        spriteBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        spriteBtn.setText("Sprite");
+        spriteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spriteBtnActionPerformed(evt);
+            }
+        });
+
+        orchardBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        orchardBtn.setText("Orchard Thieves");
+        orchardBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orchardBtnActionPerformed(evt);
+            }
+        });
+
+        softLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        softLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        softLbl.setText("Soft Drinks");
+
+        spiritsLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        spiritsLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        spiritsLbl.setText("Spirits");
+
+        fantaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        fantaBtn.setText("Fanta");
+        fantaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fantaBtnActionPerformed(evt);
+            }
+        });
+
+        tcostLbl.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tcostLbl.setText("Total Cost:");
+
+        vodkaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        vodkaBtn.setText("Vodka");
+        vodkaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vodkaBtnActionPerformed(evt);
+            }
+        });
+
+        burgerBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        burgerBtn.setText("Burger");
+        burgerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                burgerBtnActionPerformed(evt);
+            }
+        });
 
         amountLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         amountLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         amountLbl.setText("Amount given:");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(barLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(beerLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(redBtn)
-                                .addGap(159, 159, 159)
-                                .addComponent(whiteBtn))
-                            .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(heinekenBtn)
-                                .addComponent(orchardBtn)
-                                .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(dietcBtn)))
-                                .addGap(82, 82, 82)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(guinnessLbl)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(364, 364, 364))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(83, 83, 83)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                                        .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(161, 161, 161)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(kopparbergBtn)
-                                    .addComponent(carlsbergLbl)
-                                    .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(52, 52, 52))))))
-            .addComponent(foodLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(softLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(wineLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(spiritsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(ciderLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(tcostLbl)
-                        .addGap(15, 15, 15)
-                        .addComponent(tcostTF, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(changeBtn)
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(amountLbl))))
-                .addGap(28, 28, 28)
-                .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159))
+        whiskeyBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        whiskeyBtn.setText("Whiskey");
+        whiskeyBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                whiskeyBtnActionPerformed(evt);
+            }
+        });
+
+        heinekenBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        heinekenBtn.setText("Heineken");
+        heinekenBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heinekenBtnActionPerformed(evt);
+            }
+        });
+
+        redBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        redBtn.setText("Red wine");
+        redBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                redBtnActionPerformed(evt);
+            }
+        });
+
+        whiteBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        whiteBtn.setText("White wine");
+        whiteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                whiteBtnActionPerformed(evt);
+            }
+        });
+
+        beerLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        beerLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        beerLbl.setText("Beer");
+
+        barLbl.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        barLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        barLbl.setText("Bar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(barLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(beerLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(redBtn)
+                                        .addGap(159, 159, 159)
+                                        .addComponent(whiteBtn))
+                                    .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(heinekenBtn)
+                                        .addComponent(orchardBtn)
+                                        .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(dietcBtn)))
+                                        .addGap(82, 82, 82)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(guinnessLbl)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(364, 364, 364))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(83, 83, 83)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                                                .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(161, 161, 161)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(kopparbergBtn)
+                                            .addComponent(carlsbergLbl)
+                                            .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(3, 3, 3)
+                                                .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(52, 52, 52))))))
+                    .addComponent(foodLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(softLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(wineLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(spiritsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ciderLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(tcostLbl)
+                                .addGap(15, 15, 15)
+                                .addComponent(tcostTF, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(changeBtn)
+                                .addGap(35, 35, 35)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(amountLbl))))
+                        .addGap(28, 28, 28)
+                        .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(159, 159, 159)))
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(barLbl)
                         .addGap(50, 50, 50)
                         .addComponent(beerLbl))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(heinekenBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(guinnessLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(carlsbergLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(71, 71, 71)
                 .addComponent(ciderLbl)
                 .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(orchardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(kopparbergBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(79, 79, 79)
                 .addComponent(spiritsLbl)
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addComponent(wineLbl)
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(whiteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(redBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(softLbl)
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dietcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100)
                 .addComponent(foodLbl)
                 .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(91, 91, 91)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tcostTF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tcostLbl))
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(amountLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jScrollPane2.setViewportView(jPanel1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 885, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 2172, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -591,6 +619,8 @@ public class BarGUI extends javax.swing.JFrame {
     private javax.swing.JButton guinnessLbl;
     private javax.swing.JButton heinekenBtn;
     private javax.swing.JButton hotdBtn;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton kopparbergBtn;
     private javax.swing.JButton orchardBtn;
     private javax.swing.JButton pepsiBtn;

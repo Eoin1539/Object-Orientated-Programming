@@ -89,7 +89,7 @@ public class POSGUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          
-          BARGUI myGUI1 = new BARGUI();
+          BarGUI myGUI1 = new BarGUI();
           myGUI1.setVisible(true); 
           
           POSGUI myGUI = new POSGUI();
