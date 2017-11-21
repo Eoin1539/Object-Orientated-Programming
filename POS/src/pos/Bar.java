@@ -24,6 +24,8 @@ public class Bar extends javax.swing.JFrame {
     protected double burger;
     protected double hotDog;
     protected double chips;
+    protected double cashGiven;
+    protected double cashOwed;
 
     public Bar() {
     totalCost =0.00; 
@@ -40,6 +42,8 @@ public class Bar extends javax.swing.JFrame {
     burger = 6.00;
     hotDog = 5.50;
     chips = 2.20;
+    cashGiven=0.00;
+    cashOwed=0.00;
     }
 
     public Bar(double totalCost, double heineken, double carlsberg, double orchard, double guinness, double bulmers, double kopparberg, double spirits, double softDrink, double whiteWine, double redWine, double burger, double hotDog, double chips) {
