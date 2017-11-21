@@ -9,7 +9,7 @@ package pos;
  *
  * @author eoinkirwan
  */
-public class Bar {
+public class Bar extends javax.swing.JFrame {
     protected double totalCost;
     protected double heineken;
     protected double carlsberg;
@@ -41,6 +41,22 @@ public class Bar {
     hotDog = 5.50;
     chips = 2.20;
     }
-    
-    
+
+    public Bar(double totalCost, double heineken, double carlsberg, double orchard, double guinness, double bulmers, double kopparberg, double spirits, double softDrink, double whiteWine, double redWine, double burger, double hotDog, double chips) {
+        this.totalCost = totalCost;
+        this.heineken = heineken;
+        this.carlsberg = carlsberg;
+        this.orchard = orchard;
+        this.guinness = guinness;
+        this.bulmers = bulmers;
+        this.kopparberg = kopparberg;
+        this.spirits = spirits;
+        this.softDrink = softDrink;
+        this.whiteWine = whiteWine;
+        this.redWine = redWine;
+        this.burger = burger;
+        this.hotDog = hotDog;
+        this.chips = chips;
+    }
+
 }

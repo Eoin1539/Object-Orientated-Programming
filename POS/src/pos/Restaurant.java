@@ -11,5 +11,5 @@ package pos;
  */
 public class Restaurant extends POS {
     private 
-    
+   
 }
