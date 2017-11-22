@@ -11,81 +11,69 @@ import javax.swing.JOptionPane;
  *
  * @author x16472486
  */
-public class BarGUI extends Bar{
+public class BarGUI extends javax.swing.JFrame{
 
     /**
      * Creates new form BarGUI
      */
     public BarGUI() {
         initComponents();
-        
-        
+        totalCost =0.00; 
+        heineken = 5.50;
+        carlsberg = 5.00;
+        orchard = 4.50;
+        guinness = 4.30;
+        bulmers = 4.60;
+        kopparberg = 5.80;
+        spirits = 7.20;
+        softDrink = 4.20;
+        whiteWine = 5.50;
+        redWine = 5.60;
+        burger = 6.00;
+        hotDog = 5.50;
+        chips = 2.20;
+        cashGiven=0.00;
+        cashOwed=0.00;
     }
-
-    public void setTotalCost(double totalCost) {
-        this.totalCost = totalCost;
-    }
-
-    public void setHeineken(double heineken) {
-        this.heineken = heineken;
-    }
-
-    public void setCarlsberg(double carlsberg) {
-        this.carlsberg = carlsberg;
-    }
-
-    public void setOrchard(double orchard) {
-        this.orchard = orchard;
-    }
-
-    public void setGuinness(double guinness) {
-        this.guinness = guinness;
-    }
-
-    public void setBulmers(double bulmers) {
-        this.bulmers = bulmers;
-    }
-
-    public void setKopparberg(double kopparberg) {
-        this.kopparberg = kopparberg;
-    }
-
-    public void setSpirits(double spirits) {
-        this.spirits = spirits;
-    }
-
-    public void setSoftDrink(double softDrink) {
-        this.softDrink = softDrink;
-    }
-
-    public void setWhiteWine(double whiteWine) {
-        this.whiteWine = whiteWine;
-    }
-
-    public void setRedWine(double redWine) {
-        this.redWine = redWine;
-    }
-
-    public void setBurger(double burger) {
-        this.burger = burger;
-    }
-
-    public void setHotDog(double hotDog) {
-        this.hotDog = hotDog;
-    }
-
-    public void setChips(double chips) {
-        this.chips = chips;
-    }
-
-    public void setCashGiven(double cashGiven) {
-        this.cashGiven = cashGiven;
-    }
-
-    public void setCashOwed(double cashOwed) {
-        this.cashOwed = cashOwed;
-    }
-
+    private double totalCost;
+    private final double heineken;
+    private final double carlsberg;
+    private final double orchard;
+    private final double guinness;
+    private final double bulmers;
+    private final double kopparberg;
+    private final double spirits;
+    private final double softDrink;
+    private final double whiteWine;
+    private final double redWine;
+    private final double burger;
+    private final double hotDog;
+    private final double chips;
+    private double cashGiven;
+    private double cashOwed;
+    
+    //Amount variables for log
+    private int heinekenSold;
+    private int carlsbergSold;
+    private int orchardSold;
+    private int guinnessSold;
+    private int bulmersSold;
+    private int kopparbergSold;
+    private int vodkaSold;
+    private int ginSold;
+    private int whiskeySold;
+    private int rumSold;
+    private int tequilaSold;
+    private int whiteWineSold;
+    private int redWineSold;
+    private int cokeSold;
+    private int fantaSold;
+    private int dietCokeSold;
+    private int spriteSold;
+    private int pepsiSold;
+    private int hotDogSold;
+    private int chipsSold;
+    private int burgerSold;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -665,6 +653,7 @@ public class BarGUI extends Bar{
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
         fantaSold=fantaSold+1;
+        System.out.println(totalCost);
     }//GEN-LAST:event_fantaBtnActionPerformed
 
     private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
@@ -686,6 +675,7 @@ public class BarGUI extends Bar{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
         cokeSold=cokeSold+1;
+        System.out.println(totalCost);
     }//GEN-LAST:event_cokeBtnActionPerformed
 
     private void changeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeBtnActionPerformed
@@ -700,6 +690,7 @@ public class BarGUI extends Bar{
          totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
         spriteSold=spriteSold+1;
+        System.out.println(totalCost);
     }//GEN-LAST:event_spriteBtnActionPerformed
 
     private void dietcBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dietcBtnActionPerformed
@@ -707,6 +698,7 @@ public class BarGUI extends Bar{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
         dietCokeSold=dietCokeSold+1;
+        System.out.println(totalCost);
     }//GEN-LAST:event_dietcBtnActionPerformed
 
     private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
@@ -714,6 +706,7 @@ public class BarGUI extends Bar{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
         pepsiSold=pepsiSold+1;
+        System.out.println(totalCost);
     }//GEN-LAST:event_pepsiBtnActionPerformed
 
     private void burgerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerBtnActionPerformed
