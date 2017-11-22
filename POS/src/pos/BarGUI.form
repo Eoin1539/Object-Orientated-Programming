@@ -42,8 +42,9 @@
   <SubComponents>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <Properties>
+        <Property name="verticalScrollBarPolicy" type="int" value="22"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[800, 4000]"/>
+          <Dimension value="[800, 5000]"/>
         </Property>
       </Properties>
 
@@ -52,7 +53,7 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[800, 2900]"/>
+              <Dimension value="[800, 3700]"/>
             </Property>
           </Properties>
 
@@ -88,12 +89,16 @@
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="burgerBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                                       <Component id="fantaBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                                                      <Component id="dietcBtn" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                              <Component id="dietcBtn" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -153,7 +158,7 @@
                                               <Component id="amountLbl" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="amountTF" min="-2" pref="122" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
+                                              <EmptySpace pref="33" max="32767" attributes="0"/>
                                               <Component id="changeBtn" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
@@ -165,21 +170,22 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="tcostLbl" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="tCostOutLbl" min="-2" pref="158" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
                                               <Component id="changeLbl" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="changeOutLbl" min="-2" pref="130" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
                                               <Component id="amountOwedLbl" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="amountOwedOutLbl" min="-2" pref="133" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
+                                              <Component id="tcostLbl" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="tCostOutLbl" min="-2" pref="158" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -262,8 +268,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tcostLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tCostOutLbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tcostLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="tCostOutLbl" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -271,24 +277,24 @@
                           <Component id="amountLbl" alignment="3" min="-2" pref="81" max="-2" attributes="0"/>
                           <Component id="amountTF" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
-                              <Component id="clearBtn" min="-2" pref="90" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="544" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="amountOwedOutLbl" min="-2" pref="59" max="-2" attributes="0"/>
-                                  <Component id="amountOwedLbl" min="-2" pref="81" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                          <Component id="amountOwedLbl" min="-2" pref="81" max="-2" attributes="0"/>
+                          <Component id="amountOwedOutLbl" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="753" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="changeLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="changeOutLbl" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="clearBtn" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="569" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -654,7 +660,7 @@
                   <Font name="Tahoma" size="24" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Amount Owed"/>
+                <Property name="text" type="java.lang.String" value="Change Owed:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="amountOwedOutLbl">

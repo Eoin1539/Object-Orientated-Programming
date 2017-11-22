@@ -5,6 +5,8 @@
  */
 package pos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author x16472486
@@ -16,6 +18,7 @@ public class BarGUI extends Bar{
      */
     public BarGUI() {
         initComponents();
+        
         
     }
 
@@ -136,9 +139,10 @@ public class BarGUI extends Bar{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 4000));
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 5000));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 2900));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 3700));
 
         tequilaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         tequilaBtn.setText("Tequila");
@@ -367,7 +371,7 @@ public class BarGUI extends Bar{
 
         amountOwedLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         amountOwedLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        amountOwedLbl.setText("Amount Owed");
+        amountOwedLbl.setText("Change Owed:");
 
         amountOwedOutLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         amountOwedOutLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -401,10 +405,13 @@ public class BarGUI extends Bar{
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dietcBtn)))
-                                        .addGap(82, 82, 82)))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(21, 21, 21)
+                                                .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(82, 82, 82))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(dietcBtn)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -448,7 +455,7 @@ public class BarGUI extends Bar{
                                         .addComponent(amountLbl)
                                         .addGap(18, 18, 18)
                                         .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                                         .addComponent(changeBtn))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
@@ -456,19 +463,20 @@ public class BarGUI extends Bar{
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(tcostLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(239, 239, 239)
                                         .addComponent(changeLbl)
                                         .addGap(18, 18, 18)
                                         .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(162, 162, 162)
+                                        .addGap(299, 299, 299)
                                         .addComponent(amountOwedLbl)
-                                        .addGap(27, 27, 27)
-                                        .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(306, 306, 306)
+                                        .addComponent(tcostLbl)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(150, 150, 150)))
                 .addContainerGap())
@@ -539,21 +547,21 @@ public class BarGUI extends Bar{
                     .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 544, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(amountOwedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(amountOwedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 753, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(changeLbl)
                             .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(41, 41, 41)))
+                        .addGap(41, 41, 41))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
+                        .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 569, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -580,12 +588,14 @@ public class BarGUI extends Bar{
         // TODO add your handling code here:
         totalCost=totalCost+heineken;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        heinekenSold=heinekenSold+1;
     }//GEN-LAST:event_heinekenBtnActionPerformed
 
     private void orchardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orchardBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+orchard;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        orchardSold=orchardSold+1;
     }//GEN-LAST:event_orchardBtnActionPerformed
 
     private void guinnessLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guinnessLblActionPerformed
@@ -598,113 +608,133 @@ public class BarGUI extends Bar{
         // TODO add your handling code here:
         totalCost=totalCost+carlsberg;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        carlsbergSold=carlsbergSold+1;
     }//GEN-LAST:event_carlsbergLblActionPerformed
 
     private void bulmersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulmersBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+bulmers;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        bulmersSold=bulmersSold+1;
     }//GEN-LAST:event_bulmersBtnActionPerformed
 
     private void kopparbergBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kopparbergBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+kopparberg;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        kopparbergSold=kopparbergSold+1;
     }//GEN-LAST:event_kopparbergBtnActionPerformed
 
     private void rumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rumBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        rumSold=rumSold+1;
     }//GEN-LAST:event_rumBtnActionPerformed
 
     private void vodkaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vodkaBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        vodkaSold=vodkaSold+1;
     }//GEN-LAST:event_vodkaBtnActionPerformed
 
     private void ginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ginBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        ginSold=ginSold+1;
     }//GEN-LAST:event_ginBtnActionPerformed
 
     private void whiskeyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiskeyBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        whiskeySold=whiskeySold+1;
     }//GEN-LAST:event_whiskeyBtnActionPerformed
 
     private void tequilaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tequilaBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        tequilaSold=tequilaSold+1;
     }//GEN-LAST:event_tequilaBtnActionPerformed
 
     private void fantaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fantaBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        fantaSold=fantaSold+1;
     }//GEN-LAST:event_fantaBtnActionPerformed
 
     private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+whiteWine;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        whiteWineSold=whiteWineSold+1;
     }//GEN-LAST:event_whiteBtnActionPerformed
 
     private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+redWine;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        redWineSold=redWineSold+1;
     }//GEN-LAST:event_redBtnActionPerformed
 
     private void cokeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        cokeSold=cokeSold+1;
     }//GEN-LAST:event_cokeBtnActionPerformed
 
     private void changeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeBtnActionPerformed
         // TODO add your handling code here:
-        
+      double cashGiven = Double.parseDouble(amountTF.getText());  
+      cashOwed=cashGiven-totalCost;
+      amountOwedOutLbl.setText(String.valueOf(cashOwed));
     }//GEN-LAST:event_changeBtnActionPerformed
 
     private void spriteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spriteBtnActionPerformed
         // TODO add your handling code here:
          totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        spriteSold=spriteSold+1;
     }//GEN-LAST:event_spriteBtnActionPerformed
 
     private void dietcBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dietcBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        dietCokeSold=dietCokeSold+1;
     }//GEN-LAST:event_dietcBtnActionPerformed
 
     private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        pepsiSold=pepsiSold+1;
     }//GEN-LAST:event_pepsiBtnActionPerformed
 
     private void burgerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerBtnActionPerformed
         // TODO add your handling code here:
          totalCost=totalCost+burger;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        burgerSold=burgerSold+1;
     }//GEN-LAST:event_burgerBtnActionPerformed
 
     private void hotdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotdBtnActionPerformed
         // TODO add your handling code here:
          totalCost=totalCost+hotDog;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        hotDogSold=hotDogSold+1;
     }//GEN-LAST:event_hotdBtnActionPerformed
 
     private void chipsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chipsBtnActionPerformed
         // TODO add your handling code here:
-         totalCost=totalCost+chips;
+        totalCost=totalCost+chips;
         tCostOutLbl.setText(String.valueOf(totalCost));
+        chipsSold=chipsSold+1;
     }//GEN-LAST:event_chipsBtnActionPerformed
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed

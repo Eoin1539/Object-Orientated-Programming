@@ -26,6 +26,30 @@ public class Bar extends javax.swing.JFrame {
     protected double chips;
     protected double cashGiven;
     protected double cashOwed;
+    
+    //Amount variables for log
+    protected int heinekenSold;
+    protected int carlsbergSold;
+    protected int orchardSold;
+    protected int guinnessSold;
+    protected int bulmersSold;
+    protected int kopparbergSold;
+    protected int vodkaSold;
+    protected int ginSold;
+    protected int whiskeySold;
+    protected int rumSold;
+    protected int tequilaSold;
+    protected int whiteWineSold;
+    protected int redWineSold;
+    protected int cokeSold;
+    protected int fantaSold;
+    protected int dietCokeSold;
+    protected int spriteSold;
+    protected int pepsiSold;
+    protected int hotDogSold;
+    protected int chipsSold;
+    protected int burgerSold;
+    
 
     public Bar() {
     totalCost =0.00; 
