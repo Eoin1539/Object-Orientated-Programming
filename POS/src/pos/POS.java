@@ -5,6 +5,8 @@
  */
 package pos;
 
+import static java.awt.Color.black;
+
 /**
  *
  * @author x16472486

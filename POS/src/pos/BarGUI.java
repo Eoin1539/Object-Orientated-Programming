@@ -5,6 +5,7 @@
  */
 package pos;
 
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -31,6 +32,7 @@ public class BarGUI extends javax.swing.JFrame{
      * Creates new form BarGUI
      */
     public BarGUI() {
+        
          try{
         inFile= new File ("Bar-Transaction-Log.txt");
         fr = new FileReader(inFile);
@@ -74,6 +76,7 @@ public class BarGUI extends javax.swing.JFrame{
           }
          
         initComponents();
+        this.getContentPane().setBackground(Color.gray);
         totalCost =0.00; 
         heineken = 5.50;
         carlsberg = 5.00;
@@ -147,7 +150,6 @@ public class BarGUI extends javax.swing.JFrame{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         tequilaBtn = new javax.swing.JButton();
         spiritsLbl = new javax.swing.JLabel();
@@ -192,9 +194,6 @@ public class BarGUI extends javax.swing.JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(800, 5000));
-
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 3700));
 
         tequilaBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -230,7 +229,7 @@ public class BarGUI extends javax.swing.JFrame{
 
         barLbl.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         barLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        barLbl.setText("Bar");
+        barLbl.setIcon(new javax.swing.ImageIcon("/Users/eoinkirwan/Documents/College/Year 2/Semester 1/Object Orientated Programming/Project/POS/images/Bar.png")); // NOI18N
 
         ciderLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         ciderLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -282,6 +281,9 @@ public class BarGUI extends javax.swing.JFrame{
                 dietcBtnActionPerformed(evt);
             }
         });
+
+        tCostOutLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        tCostOutLbl.setText("0.00");
 
         hotdBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         hotdBtn.setText("Hot Dog");
@@ -420,6 +422,7 @@ public class BarGUI extends javax.swing.JFrame{
 
         amountOwedOutLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         amountOwedOutLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        amountOwedOutLbl.setText("0.00");
 
         clearBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         clearBtn.setText("Clear");
@@ -441,212 +444,293 @@ public class BarGUI extends javax.swing.JFrame{
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(beerLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ciderLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(545, 545, 545))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(barLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(beerLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
+                        .addGap(271, 271, 271)
+                        .addComponent(softLbl)
+                        .addGap(150, 150, 150))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(amountLbl)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(heinekenBtn)
+                                .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
+                                .addGap(46, 46, 46)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(spiritsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(redBtn)
-                                        .addGap(159, 159, 159)
-                                        .addComponent(whiteBtn))
-                                    .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(changeBtn))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(dietcBtn)
+                                        .addGap(52, 52, 52)
+                                        .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addComponent(guinnessLbl)
+                                .addGap(53, 53, 53)
+                                .addComponent(carlsbergLbl)
+                                .addGap(15, 15, 15))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(heinekenBtn)
-                                        .addComponent(orchardBtn)
-                                        .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dietcBtn)))
-                                        .addGap(82, 82, 82)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(guinnessLbl)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(364, 364, 364))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(83, 83, 83)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(161, 161, 161)))
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(kopparbergBtn)
-                                            .addComponent(carlsbergLbl)
-                                            .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(3, 3, 3)
-                                                .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(52, 52, 52))))))
-                    .addComponent(foodLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(softLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(wineLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(spiritsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ciderLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(74, 74, 74)
+                                .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
+                        .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(196, 196, 196)
-                                .addComponent(amountLbl)
-                                .addGap(18, 18, 18)
-                                .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                                .addComponent(changeBtn))
+                                .addGap(70, 70, 70)
+                                .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40)
+                                .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(306, 306, 306)
-                                        .addComponent(tcostLbl)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(299, 299, 299)
-                                        .addComponent(amountOwedLbl)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(239, 239, 239)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(viewBtn)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(clearBtn)
-                                                .addGap(72, 72, 72))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(changeLbl)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(150, 150, 150)))
-                .addContainerGap())
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(foodLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(540, 540, 540))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(122, 122, 122)
+                                .addComponent(whiteBtn)
+                                .addGap(66, 66, 66)
+                                .addComponent(redBtn)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(orchardBtn)
+                                .addGap(49, 49, 49)
+                                .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(kopparbergBtn))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(wineLbl)
+                        .addGap(561, 561, 561))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(amountOwedLbl))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(106, 106, 106)
+                                .addComponent(tcostLbl)))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                                .addComponent(clearBtn)
+                                .addGap(55, 55, 55)
+                                .addComponent(viewBtn)
+                                .addGap(417, 417, 417))))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(changeLbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(barLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 1404, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(barLbl)
-                        .addGap(50, 50, 50)
-                        .addComponent(beerLbl))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(heinekenBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(guinnessLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(carlsbergLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(71, 71, 71)
-                .addComponent(ciderLbl)
-                .addGap(42, 42, 42)
+                .addGap(20, 20, 20)
+                .addComponent(barLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(orchardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kopparbergBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(79, 79, 79)
-                .addComponent(spiritsLbl)
-                .addGap(31, 31, 31)
+                    .addComponent(beerLbl)
+                    .addComponent(ciderLbl))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(heinekenBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(guinnessLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(carlsbergLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(orchardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(kopparbergBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(spiritsLbl)
+                    .addComponent(wineLbl))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vodkaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addComponent(wineLbl)
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(whiteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(redBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68)
-                .addComponent(softLbl)
-                .addGap(31, 31, 31)
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(softLbl)
+                    .addComponent(foodLbl))
+                .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dietcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dietcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100)
-                .addComponent(foodLbl)
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(93, 93, 93)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tcostLbl)
-                    .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(amountOwedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tcostLbl)
+                    .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(amountLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amountOwedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearBtn)
                     .addComponent(viewBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1459, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2805, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(changeLbl)
                     .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41))
         );
 
-        jScrollPane1.setViewportView(jPanel1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 902, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1818, Short.MAX_VALUE)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 2287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1707, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(184, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void heinekenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heinekenBtnActionPerformed
+    private void viewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBtnActionPerformed
         // TODO add your handling code here:
-        totalCost=totalCost+heineken;
+        JOptionPane.showMessageDialog(null, "+---------------------------------------------------+\n"
+            +"|                             Beer                               |\n"
+            +"|----------------------------------------------------|\n"
+            +"| Heineken sold: " +heinekenSold
+            +"\n"+"| Carlsberg sold: "+carlsbergSold
+            +"\n"+"| Guinness sold: "+guinnessSold
+            +"\n"+"+---------------------------------------------------+\n"
+            +"|                             Cider                              |\n"
+            +"|----------------------------------------------------|\n"
+            +"| Bulmers sold: "+bulmersSold
+            +"\n"+"| Orchard thieves sold: "+orchardSold
+            +"\n"+"| Kopparberg sold: "+kopparbergSold
+            +"\n"+"+---------------------------------------------------+\n"
+            +"|                             Spirits                            \n"
+            +"|----------------------------------------------------|\n"
+            +"| Vodka sold: "+vodkaSold
+            +"\n"+"| Gin sold: "+ginSold
+            +"\n"+"| Whiksey sold: "+whiskeySold
+            +"\n"+"| Rum sold: "+rumSold
+            +"\n"+"| Tequila sold: "+tequilaSold
+            +"\n"+"+---------------------------------------------------+\n"
+            +"|                             Wine                               \n"
+            +"|----------------------------------------------------|\n"
+            +"| White wine sold: "+whiteWineSold
+            +"\n"+"| Red wine sold: "+redWineSold
+            +"\n"+"+---------------------------------------------------+\n"
+            +"|                           Soft Drinks                      \n"
+            +"|-----------------------------------------------------|\n"
+            +"| Coke sold: "+cokeSold
+            +"\n"+"| Fanta sold: "+fantaSold
+            +"\n"+"| Diet coke sold: "+dietCokeSold
+            +"\n"+"| Sprite sold: "+spriteSold
+            +"\n"+"| Pepsi sold: "+pepsiSold
+            +"\n"+"+---------------------------------------------------+\n"
+            +"|                             Food                               \n"
+            +"|----------------------------------------------------|\n"
+            +"| Hot dogs sold: "+ginSold
+            +"\n"+"| Chips sold: "+chipsSold
+            +"\n"+"| Burgers sold: "+burgerSold
+            +"\n"+"|----------------------------------------------------|\n"
+
+        );
+    }//GEN-LAST:event_viewBtnActionPerformed
+
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+        // TODO add your handling code here:
+        amountTF.setText("(Enter Amount)");
+        tCostOutLbl.setText("0.00");
+        amountOwedOutLbl.setText("");
+        totalCost=0.00;
+
+    }//GEN-LAST:event_clearBtnActionPerformed
+
+    private void cokeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        heinekenSold=heinekenSold+1;
-    }//GEN-LAST:event_heinekenBtnActionPerformed
+        cokeSold=cokeSold+1;
+        System.out.println(cokeSold);
+        System.out.println(totalCost);
+    }//GEN-LAST:event_cokeBtnActionPerformed
+
+    private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+softDrink;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        pepsiSold=pepsiSold+1;
+        System.out.println(totalCost);
+    }//GEN-LAST:event_pepsiBtnActionPerformed
+
+    private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+whiteWine;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        whiteWineSold=whiteWineSold+1;
+    }//GEN-LAST:event_whiteBtnActionPerformed
+
+    private void ginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ginBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+spirits;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        ginSold=ginSold+1;
+    }//GEN-LAST:event_ginBtnActionPerformed
 
     private void orchardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orchardBtnActionPerformed
         // TODO add your handling code here:
@@ -662,33 +746,28 @@ public class BarGUI extends javax.swing.JFrame{
         guinnessSold=guinnessSold+1;
     }//GEN-LAST:event_guinnessLblActionPerformed
 
-    private void carlsbergLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carlsbergLblActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+carlsberg;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        carlsbergSold=carlsbergSold+1;
-    }//GEN-LAST:event_carlsbergLblActionPerformed
-
-    private void bulmersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulmersBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+bulmers;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        bulmersSold=bulmersSold+1;
-    }//GEN-LAST:event_bulmersBtnActionPerformed
-
-    private void kopparbergBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kopparbergBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+kopparberg;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        kopparbergSold=kopparbergSold+1;
-    }//GEN-LAST:event_kopparbergBtnActionPerformed
-
     private void rumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rumBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
         rumSold=rumSold+1;
     }//GEN-LAST:event_rumBtnActionPerformed
+
+    private void burgerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+burger;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        burgerSold=burgerSold+1;
+    }//GEN-LAST:event_burgerBtnActionPerformed
+
+    private void fantaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fantaBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+spirits;
+
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        fantaSold=fantaSold+1;
+        System.out.println(totalCost);
+    }//GEN-LAST:event_fantaBtnActionPerformed
 
     private void vodkaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vodkaBtnActionPerformed
         // TODO add your handling code here:
@@ -697,13 +776,6 @@ public class BarGUI extends javax.swing.JFrame{
         vodkaSold=vodkaSold+1;
     }//GEN-LAST:event_vodkaBtnActionPerformed
 
-    private void ginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ginBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        ginSold=ginSold+1;
-    }//GEN-LAST:event_ginBtnActionPerformed
-
     private void whiskeyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiskeyBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
@@ -711,60 +783,29 @@ public class BarGUI extends javax.swing.JFrame{
         whiskeySold=whiskeySold+1;
     }//GEN-LAST:event_whiskeyBtnActionPerformed
 
-    private void tequilaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tequilaBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        tequilaSold=tequilaSold+1;
-    }//GEN-LAST:event_tequilaBtnActionPerformed
-
-    private void fantaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fantaBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+spirits;
-        
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        fantaSold=fantaSold+1;
-        System.out.println(totalCost);
-    }//GEN-LAST:event_fantaBtnActionPerformed
-
-    private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+whiteWine;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        whiteWineSold=whiteWineSold+1;
-    }//GEN-LAST:event_whiteBtnActionPerformed
-
-    private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
-        // TODO add your handling code here:
-        totalCost=totalCost+redWine;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        redWineSold=redWineSold+1;
-    }//GEN-LAST:event_redBtnActionPerformed
-
-    private void cokeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeBtnActionPerformed
+    private void spriteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spriteBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        cokeSold=cokeSold+1;
-        System.out.println(cokeSold);
+        spriteSold=spriteSold+1;
         System.out.println(totalCost);
-    }//GEN-LAST:event_cokeBtnActionPerformed
+    }//GEN-LAST:event_spriteBtnActionPerformed
 
     private void changeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeBtnActionPerformed
         // TODO add your handling code here:
-      double cashGiven = Double.parseDouble(amountTF.getText());  
-      cashOwed=cashGiven-totalCost;
-      amountOwedOutLbl.setText(String.valueOf(df.format(cashOwed)));
-      
+        double cashGiven = Double.parseDouble(amountTF.getText());
+        cashOwed=cashGiven-totalCost;
+        amountOwedOutLbl.setText(String.valueOf(df.format(cashOwed)));
+
         File outFile;
         FileWriter fw;
         BufferedWriter bw;
-        
+
         try{
             outFile = new File ("Bar-Transaction-Log.txt");
             fw = new FileWriter(outFile);
             bw = new BufferedWriter(fw);
-            
+
             bw.write(String.valueOf(heinekenSold));
             bw.newLine();
             bw.write(String.valueOf(carlsbergSold));
@@ -806,7 +847,7 @@ public class BarGUI extends javax.swing.JFrame{
             bw.write(String.valueOf(chipsSold));
             bw.newLine();
             bw.write(String.valueOf(burgerSold));
-            
+
             bw.close();
             System.out.println("Saved to file successfully");
         }catch (IOException e){
@@ -814,13 +855,12 @@ public class BarGUI extends javax.swing.JFrame{
         }
     }//GEN-LAST:event_changeBtnActionPerformed
 
-    private void spriteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spriteBtnActionPerformed
+    private void hotdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotdBtnActionPerformed
         // TODO add your handling code here:
-         totalCost=totalCost+softDrink;
+        totalCost=totalCost+hotDog;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        spriteSold=spriteSold+1;
-        System.out.println(totalCost);
-    }//GEN-LAST:event_spriteBtnActionPerformed
+        hotDogSold=hotDogSold+1;
+    }//GEN-LAST:event_hotdBtnActionPerformed
 
     private void dietcBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dietcBtnActionPerformed
         // TODO add your handling code here:
@@ -830,27 +870,33 @@ public class BarGUI extends javax.swing.JFrame{
         System.out.println(totalCost);
     }//GEN-LAST:event_dietcBtnActionPerformed
 
-    private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
+    private void bulmersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulmersBtnActionPerformed
         // TODO add your handling code here:
-        totalCost=totalCost+softDrink;
+        totalCost=totalCost+bulmers;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        pepsiSold=pepsiSold+1;
-        System.out.println(totalCost);
-    }//GEN-LAST:event_pepsiBtnActionPerformed
+        bulmersSold=bulmersSold+1;
+    }//GEN-LAST:event_bulmersBtnActionPerformed
 
-    private void burgerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerBtnActionPerformed
+    private void kopparbergBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kopparbergBtnActionPerformed
         // TODO add your handling code here:
-         totalCost=totalCost+burger;
+        totalCost=totalCost+kopparberg;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        burgerSold=burgerSold+1;
-    }//GEN-LAST:event_burgerBtnActionPerformed
+        kopparbergSold=kopparbergSold+1;
+    }//GEN-LAST:event_kopparbergBtnActionPerformed
 
-    private void hotdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotdBtnActionPerformed
+    private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
         // TODO add your handling code here:
-        totalCost=totalCost+hotDog;
+        totalCost=totalCost+redWine;
         tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
-        hotDogSold=hotDogSold+1;
-    }//GEN-LAST:event_hotdBtnActionPerformed
+        redWineSold=redWineSold+1;
+    }//GEN-LAST:event_redBtnActionPerformed
+
+    private void heinekenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heinekenBtnActionPerformed
+        // TODO add your handling code here:
+        totalCost=totalCost+heineken;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        heinekenSold=heinekenSold+1;
+    }//GEN-LAST:event_heinekenBtnActionPerformed
 
     private void chipsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chipsBtnActionPerformed
         // TODO add your handling code here:
@@ -859,63 +905,19 @@ public class BarGUI extends javax.swing.JFrame{
         chipsSold=chipsSold+1;
     }//GEN-LAST:event_chipsBtnActionPerformed
 
-    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+    private void carlsbergLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carlsbergLblActionPerformed
         // TODO add your handling code here:
-        amountTF.setText("(Enter Amount)");
-        tCostOutLbl.setText("0.00");
-        amountOwedOutLbl.setText("");
-        totalCost=0.00;
-     
-    }//GEN-LAST:event_clearBtnActionPerformed
+        totalCost=totalCost+carlsberg;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        carlsbergSold=carlsbergSold+1;
+    }//GEN-LAST:event_carlsbergLblActionPerformed
 
-    private void viewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBtnActionPerformed
+    private void tequilaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tequilaBtnActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "+---------------------------------------------------+\n"
-        +"|                             Beer                               |\n"
-        +"|----------------------------------------------------|\n"
-        +"| Heineken sold: " +heinekenSold
-        +"\n"+"| Carlsberg sold: "+carlsbergSold
-        +"\n"+"| Guinness sold: "+guinnessSold
-       +"\n"+"+---------------------------------------------------+\n"
-        +"|                             Cider                              |\n"
-        +"|----------------------------------------------------|\n"
-        +"| Bulmers sold: "+bulmersSold
-        +"\n"+"| Orchard thieves sold: "+orchardSold
-        +"\n"+"| Kopparberg sold: "+kopparbergSold
-        +"\n"+"+---------------------------------------------------+\n"
-        +"|                             Spirits                            \n"
-        +"|----------------------------------------------------|\n"
-        +"| Vodka sold: "+vodkaSold
-        +"\n"+"| Gin sold: "+ginSold
-        +"\n"+"| Whiksey sold: "+whiskeySold
-        +"\n"+"| Rum sold: "+rumSold
-        +"\n"+"| Tequila sold: "+tequilaSold
-        +"\n"+"+---------------------------------------------------+\n"
-        +"|                             Wine                               \n"
-        +"|----------------------------------------------------|\n"
-        +"| White wine sold: "+whiteWineSold
-        +"\n"+"| Red wine sold: "+redWineSold
-         +"\n"+"+---------------------------------------------------+\n"
-        +"|                           Soft Drinks                      \n"
-        +"|-----------------------------------------------------|\n"
-        +"| Coke sold: "+cokeSold
-        +"\n"+"| Fanta sold: "+fantaSold
-        +"\n"+"| Diet coke sold: "+dietCokeSold
-        +"\n"+"| Sprite sold: "+spriteSold
-        +"\n"+"| Pepsi sold: "+pepsiSold
-        +"\n"+"+---------------------------------------------------+\n"
-        +"|                             Food                               \n"
-        +"|----------------------------------------------------|\n"
-        +"| Hot dogs sold: "+ginSold
-        +"\n"+"| Chips sold: "+chipsSold
-        +"\n"+"| Burgers sold: "+burgerSold
-        +"\n"+"|----------------------------------------------------|\n"
-        
-        
-        
-        
-        );
-    }//GEN-LAST:event_viewBtnActionPerformed
+        totalCost=totalCost+spirits;
+        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tequilaSold=tequilaSold+1;
+    }//GEN-LAST:event_tequilaBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -977,7 +979,6 @@ public class BarGUI extends javax.swing.JFrame{
     private javax.swing.JButton heinekenBtn;
     private javax.swing.JButton hotdBtn;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton kopparbergBtn;
     private javax.swing.JButton orchardBtn;
     private javax.swing.JButton pepsiBtn;
