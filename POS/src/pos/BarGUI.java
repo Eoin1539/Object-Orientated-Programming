@@ -5,7 +5,6 @@
  */
 package pos;
 
-import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -68,6 +67,7 @@ public class BarGUI extends javax.swing.JFrame{
         hotDogSold=Integer.parseInt(items[18]);
         chipsSold=Integer.parseInt(items[19]);
         burgerSold=Integer.parseInt(items[20]);
+        taxOwed=Double.parseDouble(items[21]);
         
          }
          catch(IOException e){
@@ -76,7 +76,6 @@ public class BarGUI extends javax.swing.JFrame{
           }
          
         initComponents();
-        this.getContentPane().setBackground(Color.gray);
         totalCost =0.00; 
         heineken = 5.50;
         carlsberg = 5.00;
@@ -93,6 +92,8 @@ public class BarGUI extends javax.swing.JFrame{
         chips = 2.20;
         cashGiven=0.00;
         cashOwed=0.00;
+        taxRate=22.00;
+        EURO = "\u20AC";
     }
     private double totalCost;
     private final double heineken;
@@ -110,6 +111,7 @@ public class BarGUI extends javax.swing.JFrame{
     private final double chips;
     private double cashGiven;
     private double cashOwed;
+    private final String EURO;
     
     //Amount variables for log
     private int heinekenSold;
@@ -133,6 +135,8 @@ public class BarGUI extends javax.swing.JFrame{
     private int hotDogSold;
     private int chipsSold;
     private int burgerSold;
+    private double taxOwed;
+    private double taxRate;
     
     DecimalFormat df = new DecimalFormat("#.##");
     
@@ -283,7 +287,7 @@ public class BarGUI extends javax.swing.JFrame{
         });
 
         tCostOutLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        tCostOutLbl.setText("0.00");
+        tCostOutLbl.setText("€ 0.00");
 
         hotdBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         hotdBtn.setText("Hot Dog");
@@ -421,8 +425,8 @@ public class BarGUI extends javax.swing.JFrame{
         amountOwedLbl.setText("Change Owed:");
 
         amountOwedOutLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        amountOwedOutLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        amountOwedOutLbl.setText("0.00");
+        amountOwedOutLbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        amountOwedOutLbl.setText("€ 0.00");
 
         clearBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         clearBtn.setText("Clear");
@@ -516,38 +520,34 @@ public class BarGUI extends javax.swing.JFrame{
                                 .addGap(122, 122, 122)
                                 .addComponent(whiteBtn)
                                 .addGap(66, 66, 66)
-                                .addComponent(redBtn)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(redBtn))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(orchardBtn)
                                 .addGap(49, 49, 49)
                                 .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(39, 39, 39)
-                                .addComponent(kopparbergBtn))))
+                                .addComponent(kopparbergBtn)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(wineLbl)
                         .addGap(561, 561, 561))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(amountOwedLbl))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
-                                .addComponent(tcostLbl)))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
-                                .addComponent(clearBtn)
-                                .addGap(55, 55, 55)
-                                .addComponent(viewBtn)
-                                .addGap(417, 417, 417))))))
+                        .addGap(70, 70, 70)
+                        .addComponent(amountOwedLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                        .addComponent(clearBtn)
+                        .addGap(55, 55, 55)
+                        .addComponent(viewBtn)
+                        .addGap(417, 417, 417))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(tcostLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -566,9 +566,9 @@ public class BarGUI extends javax.swing.JFrame{
                 .addGap(20, 20, 20)
                 .addComponent(barLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(beerLbl)
-                    .addComponent(ciderLbl))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ciderLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(beerLbl))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -616,7 +616,7 @@ public class BarGUI extends javax.swing.JFrame{
                     .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountOwedLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(amountOwedOutLbl)
                     .addComponent(clearBtn)
                     .addComponent(viewBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2805, Short.MAX_VALUE)
@@ -649,13 +649,13 @@ public class BarGUI extends javax.swing.JFrame{
     private void viewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBtnActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "+---------------------------------------------------+\n"
-            +"|                             Beer                               |\n"
+            +"|                             Beer                               \n"
             +"|----------------------------------------------------|\n"
             +"| Heineken sold: " +heinekenSold
             +"\n"+"| Carlsberg sold: "+carlsbergSold
             +"\n"+"| Guinness sold: "+guinnessSold
             +"\n"+"+---------------------------------------------------+\n"
-            +"|                             Cider                              |\n"
+            +"|                             Cider                              \n"
             +"|----------------------------------------------------|\n"
             +"| Bulmers sold: "+bulmersSold
             +"\n"+"| Orchard thieves sold: "+orchardSold
@@ -687,7 +687,11 @@ public class BarGUI extends javax.swing.JFrame{
             +"| Hot dogs sold: "+ginSold
             +"\n"+"| Chips sold: "+chipsSold
             +"\n"+"| Burgers sold: "+burgerSold
-            +"\n"+"|----------------------------------------------------|\n"
+                +"\n"+"+---------------------------------------------------+\n"
+            +"|                             Tax                              \n"
+            +"|----------------------------------------------------|\n"
+            +"| Total Tax Owed: "+EURO+" "+df.format(taxOwed)
+             +"\n"+"|----------------------------------------------------|\n"
 
         );
     }//GEN-LAST:event_viewBtnActionPerformed
@@ -695,8 +699,8 @@ public class BarGUI extends javax.swing.JFrame{
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
         // TODO add your handling code here:
         amountTF.setText("(Enter Amount)");
-        tCostOutLbl.setText("0.00");
-        amountOwedOutLbl.setText("");
+        tCostOutLbl.setText(EURO+" "+"0.00");
+        amountOwedOutLbl.setText(EURO+" "+"0.00");
         totalCost=0.00;
 
     }//GEN-LAST:event_clearBtnActionPerformed
@@ -704,7 +708,7 @@ public class BarGUI extends javax.swing.JFrame{
     private void cokeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         cokeSold=cokeSold+1;
         System.out.println(cokeSold);
         System.out.println(totalCost);
@@ -713,7 +717,7 @@ public class BarGUI extends javax.swing.JFrame{
     private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         pepsiSold=pepsiSold+1;
         System.out.println(totalCost);
     }//GEN-LAST:event_pepsiBtnActionPerformed
@@ -721,42 +725,42 @@ public class BarGUI extends javax.swing.JFrame{
     private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+whiteWine;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         whiteWineSold=whiteWineSold+1;
     }//GEN-LAST:event_whiteBtnActionPerformed
 
     private void ginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ginBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         ginSold=ginSold+1;
     }//GEN-LAST:event_ginBtnActionPerformed
 
     private void orchardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orchardBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+orchard;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         orchardSold=orchardSold+1;
     }//GEN-LAST:event_orchardBtnActionPerformed
 
     private void guinnessLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guinnessLblActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+guinness;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         guinnessSold=guinnessSold+1;
     }//GEN-LAST:event_guinnessLblActionPerformed
 
     private void rumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rumBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         rumSold=rumSold+1;
     }//GEN-LAST:event_rumBtnActionPerformed
 
     private void burgerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+burger;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         burgerSold=burgerSold+1;
     }//GEN-LAST:event_burgerBtnActionPerformed
 
@@ -764,7 +768,7 @@ public class BarGUI extends javax.swing.JFrame{
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
 
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         fantaSold=fantaSold+1;
         System.out.println(totalCost);
     }//GEN-LAST:event_fantaBtnActionPerformed
@@ -772,21 +776,21 @@ public class BarGUI extends javax.swing.JFrame{
     private void vodkaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vodkaBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         vodkaSold=vodkaSold+1;
     }//GEN-LAST:event_vodkaBtnActionPerformed
 
     private void whiskeyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiskeyBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         whiskeySold=whiskeySold+1;
     }//GEN-LAST:event_whiskeyBtnActionPerformed
 
     private void spriteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spriteBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         spriteSold=spriteSold+1;
         System.out.println(totalCost);
     }//GEN-LAST:event_spriteBtnActionPerformed
@@ -794,8 +798,10 @@ public class BarGUI extends javax.swing.JFrame{
     private void changeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeBtnActionPerformed
         // TODO add your handling code here:
         double cashGiven = Double.parseDouble(amountTF.getText());
+        if(totalCost<=cashGiven){
         cashOwed=cashGiven-totalCost;
-        amountOwedOutLbl.setText(String.valueOf(df.format(cashOwed)));
+        amountOwedOutLbl.setText(EURO+" "+String.valueOf(df.format(cashOwed)));
+        taxOwed=(totalCost*taxRate)/100;
 
         File outFile;
         FileWriter fw;
@@ -847,25 +853,32 @@ public class BarGUI extends javax.swing.JFrame{
             bw.write(String.valueOf(chipsSold));
             bw.newLine();
             bw.write(String.valueOf(burgerSold));
+            bw.newLine();
+            bw.write(String.valueOf(df.format(taxOwed)));
+            
 
             bw.close();
             System.out.println("Saved to file successfully");
         }catch (IOException e){
             System.out.println("Error writing to file:"+e);
         }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "You have not entered enough money!");
+        }
     }//GEN-LAST:event_changeBtnActionPerformed
 
     private void hotdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotdBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+hotDog;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         hotDogSold=hotDogSold+1;
     }//GEN-LAST:event_hotdBtnActionPerformed
 
     private void dietcBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dietcBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+softDrink;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         dietCokeSold=dietCokeSold+1;
         System.out.println(totalCost);
     }//GEN-LAST:event_dietcBtnActionPerformed
@@ -873,49 +886,49 @@ public class BarGUI extends javax.swing.JFrame{
     private void bulmersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulmersBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+bulmers;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         bulmersSold=bulmersSold+1;
     }//GEN-LAST:event_bulmersBtnActionPerformed
 
     private void kopparbergBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kopparbergBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+kopparberg;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         kopparbergSold=kopparbergSold+1;
     }//GEN-LAST:event_kopparbergBtnActionPerformed
 
     private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+redWine;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         redWineSold=redWineSold+1;
     }//GEN-LAST:event_redBtnActionPerformed
 
     private void heinekenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heinekenBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+heineken;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         heinekenSold=heinekenSold+1;
     }//GEN-LAST:event_heinekenBtnActionPerformed
 
     private void chipsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chipsBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+chips;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         chipsSold=chipsSold+1;
     }//GEN-LAST:event_chipsBtnActionPerformed
 
     private void carlsbergLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carlsbergLblActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+carlsberg;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         carlsbergSold=carlsbergSold+1;
     }//GEN-LAST:event_carlsbergLblActionPerformed
 
     private void tequilaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tequilaBtnActionPerformed
         // TODO add your handling code here:
         totalCost=totalCost+spirits;
-        tCostOutLbl.setText(String.valueOf(df.format(totalCost)));
+        tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         tequilaSold=tequilaSold+1;
     }//GEN-LAST:event_tequilaBtnActionPerformed
 
@@ -947,10 +960,8 @@ public class BarGUI extends javax.swing.JFrame{
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BarGUI().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new BarGUI().setVisible(true);
         });
     }
 

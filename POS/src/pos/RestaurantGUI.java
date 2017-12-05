@@ -158,7 +158,7 @@ public class RestaurantGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlblRestaurant.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jlblRestaurant.setText("Restaurant");
+        jlblRestaurant.setIcon(new javax.swing.ImageIcon("/Users/eoinkirwan/Documents/College/Year 2/Semester 1/Object Orientated Programming/Project/POS/images/Restaurant.png")); // NOI18N
 
         jlblBurgerMeal.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jlblBurgerMeal.setText("Burger Meal");
@@ -461,6 +461,11 @@ public class RestaurantGUI extends javax.swing.JFrame {
         jlblTax.setText("Tax");
 
         jtxtTax.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtTax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtTaxActionPerformed(evt);
+            }
+        });
 
         jlblSubTotal.setText("Sub Total");
 
@@ -517,7 +522,7 @@ public class RestaurantGUI extends javax.swing.JFrame {
                                     .addGap(27, 27, 27)
                                     .addComponent(jtxtGrilledChickenBurger, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(0, 0, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jbtnViewLog)
@@ -552,7 +557,7 @@ public class RestaurantGUI extends javax.swing.JFrame {
                                     .addComponent(jtxtTea, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jtxtCoffee, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                                     .addComponent(jtxtWater))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 61, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -565,10 +570,6 @@ public class RestaurantGUI extends javax.swing.JFrame {
                                 .addGap(177, 177, 177))
                             .addComponent(jlblTax))))
                 .addGap(34, 34, 34))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(272, 272, 272)
-                .addComponent(jlblRestaurant)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(134, 134, 134)
                 .addComponent(jlblStarters)
@@ -594,6 +595,10 @@ public class RestaurantGUI extends javax.swing.JFrame {
                     .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(91, 91, 91))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(jlblRestaurant)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1267,6 +1272,10 @@ private JFrame frame; // Declare Variable JFrame
 
         );
     }//GEN-LAST:event_jbtnViewLogActionPerformed
+
+    private void jtxtTaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTaxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtTaxActionPerformed
 
     /**
      * @param args the command line arguments

@@ -68,6 +68,11 @@ public class POSGUI extends javax.swing.JFrame {
         myButton.setBackground(new java.awt.Color(255, 255, 255));
         myButton.setFont(new java.awt.Font("PT Sans Caption", 1, 36)); // NOI18N
         myButton.setText("Restaurant");
+        myButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myButtonActionPerformed(evt);
+            }
+        });
 
         nameLbl.setText("Created By Eoin Kirwan, Karl McSherry & Andrew McBride");
 
@@ -122,6 +127,8 @@ public class POSGUI extends javax.swing.JFrame {
 
     private void boxOfficeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxOfficeBtnActionPerformed
         // TODO add your handling code here:
+        BOGUI myGUI3 = new BOGUI();
+        myGUI3.setVisible(true); 
     }//GEN-LAST:event_boxOfficeBtnActionPerformed
 
     private void barBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barBtnActionPerformed
@@ -130,10 +137,13 @@ public class POSGUI extends javax.swing.JFrame {
           BarGUI myGUI1 = new BarGUI();
           myGUI1.setVisible(true); 
           
-          POSGUI myGUI = new POSGUI();
-          myGUI.setVisible(false);
-          
     }//GEN-LAST:event_barBtnActionPerformed
+
+    private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButtonActionPerformed
+        // TODO add your handling code here:
+        RestaurantGUI myGUI2 = new RestaurantGUI();
+          myGUI2.setVisible(true); 
+    }//GEN-LAST:event_myButtonActionPerformed
 
     /**
      * @param args the command line arguments
