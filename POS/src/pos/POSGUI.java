@@ -6,6 +6,9 @@
 package pos;
 
 import java.awt.Color;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /*
@@ -47,8 +50,9 @@ public class POSGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
-        boxOfficeBtn.setBackground(new java.awt.Color(102, 102, 102));
+        boxOfficeBtn.setBackground(new java.awt.Color(51, 255, 255));
         boxOfficeBtn.setFont(new java.awt.Font("PT Sans Caption", 1, 36)); // NOI18N
+        boxOfficeBtn.setForeground(new java.awt.Color(255, 255, 255));
         boxOfficeBtn.setText("Box Office");
         boxOfficeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +62,7 @@ public class POSGUI extends javax.swing.JFrame {
 
         barBtn.setBackground(new java.awt.Color(51, 255, 255));
         barBtn.setFont(new java.awt.Font("PT Sans Caption", 1, 36)); // NOI18N
+        barBtn.setForeground(new java.awt.Color(255, 255, 255));
         barBtn.setText("Bar");
         barBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,8 +70,9 @@ public class POSGUI extends javax.swing.JFrame {
             }
         });
 
-        myButton.setBackground(new java.awt.Color(255, 255, 255));
+        myButton.setBackground(new java.awt.Color(0, 255, 255));
         myButton.setFont(new java.awt.Font("PT Sans Caption", 1, 36)); // NOI18N
+        myButton.setForeground(new java.awt.Color(255, 255, 255));
         myButton.setText("Restaurant");
         myButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,18 +80,15 @@ public class POSGUI extends javax.swing.JFrame {
             }
         });
 
+        nameLbl.setForeground(new java.awt.Color(255, 255, 255));
         nameLbl.setText("Created By Eoin Kirwan, Karl McSherry & Andrew McBride");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/eoinkirwan/Documents/College/Year 2/Semester 1/Object Orientated Programming/Project/POS/images/Welcome.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("H:\\Year 2\\Semester 1\\Object Orientated Programming\\Project\\POS\\images\\Welcome.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -93,31 +96,33 @@ public class POSGUI extends javax.swing.JFrame {
                         .addComponent(nameLbl))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addComponent(boxOfficeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107)
+                        .addComponent(boxOfficeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(84, 84, 84)
                         .addComponent(barBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 100, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(myButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(214, 214, 214))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(myButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(218, 218, 218))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(94, 94, 94))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(242, 242, 242)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(boxOfficeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(barBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(88, 88, 88)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boxOfficeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(barBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
                 .addComponent(myButton)
-                .addGap(134, 134, 134)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addComponent(nameLbl)
                 .addContainerGap())
         );
@@ -126,9 +131,13 @@ public class POSGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boxOfficeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxOfficeBtnActionPerformed
-        // TODO add your handling code here:
-        BOGUI myGUI3 = new BOGUI();
-        myGUI3.setVisible(true); 
+        try {
+            // TODO add your handling code here:
+            BOGUI myGUI3 = new BOGUI(); 
+            myGUI3.setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(POSGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_boxOfficeBtnActionPerformed
 
     private void barBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barBtnActionPerformed

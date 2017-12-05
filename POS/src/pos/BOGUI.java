@@ -5,24 +5,32 @@
  */
 package pos;
 
-import boxoffice.BoxOffice;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
+/*
+ *  BOGUI.java
+ * 
+ *  Rev 3
  *
- * @author eoinkirwan
+ *  02/12/2017
+
+ * @author Karl McSherry, x16401714
+ * @design Eoin Kirwan, x16472486  
+ *
  */
+
 public class BOGUI extends javax.swing.JFrame {
-  int section;
+
+    int section;
     String stand;
     String seatOutput;
     int seat;
@@ -38,13 +46,14 @@ public class BOGUI extends javax.swing.JFrame {
     int stdCSec1;
     int stdCSec2;
     int stdCSec3;
+    private final String EURO;
     String seatString;
     StringBuffer strBuff;
-    
+
     /**
-     * Creates new form BOGUI
+     *
+     * @throws IOException
      */
-      
     public BOGUI() throws IOException {
         section = 0;
         stand = "";
@@ -52,22 +61,14 @@ public class BOGUI extends javax.swing.JFrame {
         totalPrice = 0;
         individualPrice = 0;
         quantity = 0;
+        EURO = "\u20AC";
+
         strBuff = new StringBuffer();
+        initComponents();
     }
-    
-    public void setSection(int section){
-        this.section = section;
-    }
-    
-    public void setStand(String stand){
-        this.stand = stand;
-    }
-    
-    public void setQuantity(int quantity){
-        this.quantity = quantity;
-    }
-    
-    public void calculatePrice(){
+    DecimalFormat df = new DecimalFormat("#.##");
+
+    public void calculatePrice() {
         switch (section) {
             case 1:
                 individualPrice = 80.50;
@@ -78,169 +79,159 @@ public class BOGUI extends javax.swing.JFrame {
                 totalPrice = individualPrice * quantity;
                 break;
             default:
-                individualPrice = 37.50;   
+                individualPrice = 37.50;
                 totalPrice = individualPrice * quantity;
                 break;
         }
-       }
+    }
+
     public void allocateSeats() {
         strBuff.delete(0, strBuff.length());
-         switch(stand)  {
-             case "A":
-                 switch(section){
-                     case 1:
-                        if((stdASec1 + quantity) > 100){
+        switch (stand) {
+            case "A":
+                switch (section) {
+                    case 1:
+                        if ((stdASec1 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdASec1 + 1);
                                 stdASec1++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 2:
-                        if((stdASec2 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 2:
+                        if ((stdASec2 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdASec2 + 1);
                                 stdASec2++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 3:
-                        if((stdASec3 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 3:
+                        if ((stdASec3 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdASec3 + 1);
                                 stdASec3++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
                 }
                 break;
-                        }
-            break;
-            
+
             case "B":
-                 switch(section){
-                     case 1:
-                        if((stdBSec1 + quantity) > 100){
+                switch (section) {
+                    case 1:
+                        if ((stdBSec1 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdBSec1 + 1);
                                 stdBSec1++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 2:
-                        if((stdBSec2 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 2:
+                        if ((stdBSec2 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdBSec2 + 1);
                                 stdBSec2++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 3:
-                        if((stdBSec3 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 3:
+                        if ((stdBSec3 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdBSec3 + 1);
                                 stdBSec3++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
                 }
                 break;
-                        }
-            break;
-            
+
             case "C":
-                 switch(section){
-                     case 1:
-                        if((stdCSec1 + quantity) > 100){
+                switch (section) {
+                    case 1:
+                        if ((stdCSec1 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdCSec1 + 1);
                                 stdCSec1++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 2:
-                        if((stdCSec2 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 2:
+                        if ((stdCSec2 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdCSec2 + 1);
                                 stdASec2++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
-                }
-                break;
-                
-                case 3:
-                        if((stdCSec3 + quantity) > 100){
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
+
+                    case 3:
+                        if ((stdCSec3 + quantity) > 100) {
                             seatOutput = "Sorry, we can not find " + quantity + " seats together in stand " + stand + " section " + section;
-                }
-                        else {
-                             for (int i = 0; i<quantity; i++){
+                        } else {
+                            for (int i = 0; i < quantity; i++) {
                                 seat = (stdCSec3 + 1);
                                 stdCSec3++;
-                                strBuff.append(seat);   
+                                strBuff.append(seat);
                                 strBuff.append(" ");
-                                }
-                            seatOutput= strBuff.toString();
+                            }
+                            seatOutput = strBuff.toString();
+                        }
+                        break;
                 }
                 break;
-                        }
-            break;
-            
-         
-  
+
+        }
     }
-    }
-       
-    public void writeFile() throws IOException{
-    try{
-            File outFile = new File ("BoxOffice.txt");
+
+    public void writeFile() throws IOException {
+        try {
+            File outFile = new File("BoxOffice.txt");
             FileWriter fw = new FileWriter(outFile);
             BufferedWriter bw = new BufferedWriter(fw);
 
@@ -264,54 +255,50 @@ public class BOGUI extends javax.swing.JFrame {
 
             bw.close();
             System.out.println("Saved to file successfully");
-        }catch (IOException e){
-            System.out.println("Error writing to file:"+e);
+        } catch (IOException e) {
+            System.out.println("Error writing to file:" + e);
         }
 
-         
-     }
-    
-    
+    }
+
     /**
      *
      * @throws IOException
      */
     public void readFile() throws IOException {
-       try{
-        File inFile= new File ("BoxOffice.txt");
-        FileReader fr = new FileReader(inFile);
-        BufferedReader br = new BufferedReader(fr);
-        
-        String[] ticketsSold = new String[100];
-        String line = "";
-        int i=0;
-        while(line!=null){
-            line=br.readLine();
-            ticketsSold[i]=line;
-            i=i+1;
+        try {
+            File inFile = new File("BoxOffice.txt");
+            FileReader fr = new FileReader(inFile);
+            BufferedReader br = new BufferedReader(fr);
+
+            String[] ticketsSold = new String[100];
+            String line = "";
+            int i = 0;
+            while (line != null) {
+                line = br.readLine();
+                ticketsSold[i] = line;
+                i = i + 1;
+            }
+            br.close();
+            stdASec1 = Integer.parseInt(ticketsSold[0]);
+            stdASec2 = Integer.parseInt(ticketsSold[1]);
+            stdASec3 = Integer.parseInt(ticketsSold[2]);
+            stdBSec1 = Integer.parseInt(ticketsSold[3]);
+            stdBSec2 = Integer.parseInt(ticketsSold[4]);
+            stdBSec3 = Integer.parseInt(ticketsSold[5]);
+            stdCSec1 = Integer.parseInt(ticketsSold[6]);
+            stdCSec2 = Integer.parseInt(ticketsSold[7]);
+            stdCSec3 = Integer.parseInt(ticketsSold[8]);
+
+            System.out.println(stdASec1);
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Sorry, there was an error reading from the file, please try closing and opening the application again " + e);
+
         }
-        br.close();
-        stdASec1=Integer.parseInt(ticketsSold[0]);
-        stdASec2=Integer.parseInt(ticketsSold[1]);
-        stdASec3=Integer.parseInt(ticketsSold[2]);
-        stdBSec1=Integer.parseInt(ticketsSold[3]);
-        stdBSec2=Integer.parseInt(ticketsSold[4]);
-        stdBSec3=Integer.parseInt(ticketsSold[5]);
-        stdCSec1=Integer.parseInt(ticketsSold[6]);
-        stdCSec2=Integer.parseInt(ticketsSold[7]);
-        stdCSec3=Integer.parseInt(ticketsSold[8]);
-        
-        System.out.println(stdASec1);
-         }
-         catch(IOException e){
-         JOptionPane.showMessageDialog(null, "Sorry, there was an error reading from the file, please try closing and opening the application again "+e);
-    
-          }
-     
+
     }
-      
-   
-    public void clearData(){
+
+    public void clearData() {
         stdASec1 = 0;
         stdASec2 = 0;
         stdASec3 = 0;
@@ -321,14 +308,6 @@ public class BOGUI extends javax.swing.JFrame {
         stdCSec1 = 0;
         stdCSec2 = 0;
         stdCSec3 = 0;
-    }
-
-    private void initComponents() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-         
-       
     }
 
     /**
@@ -350,16 +329,16 @@ public class BOGUI extends javax.swing.JFrame {
         priceLbl = new javax.swing.JLabel();
         priceOutLbl = new javax.swing.JLabel();
         seatsOutLbl = new javax.swing.JLabel();
-        computeBtn = new javax.swing.JButton();
         clearBtn = new javax.swing.JButton();
         standCB = new javax.swing.JComboBox<>();
         sectionCB = new javax.swing.JComboBox<>();
         quantityCB = new javax.swing.JComboBox<>();
+        computeBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         BOLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BOLbl.setIcon(new javax.swing.ImageIcon("/Users/eoinkirwan/Documents/College/Year 2/Semester 1/Object Orientated Programming/Project/POS/images/Box Office.png")); // NOI18N
+        BOLbl.setIcon(new javax.swing.ImageIcon("H:\\Year 2\\Semester 1\\Object Orientated Programming\\Project\\POS\\images\\Box Office.png")); // NOI18N
 
         standLbl.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         standLbl.setText("Stand:");
@@ -387,14 +366,6 @@ public class BOGUI extends javax.swing.JFrame {
 
         seatsOutLbl.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
-        computeBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        computeBtn.setText("Get Tickets");
-        computeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                computeBtnActionPerformed(evt);
-            }
-        });
-
         clearBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         clearBtn.setText("Clear");
 
@@ -409,6 +380,14 @@ public class BOGUI extends javax.swing.JFrame {
 
         quantityCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
+        computeBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        computeBtn.setText("Get tickets");
+        computeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                computeBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -418,45 +397,37 @@ public class BOGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(148, 148, 148)
-                                .addComponent(computeBtn)
-                                .addGap(29, 29, 29)
-                                .addComponent(clearBtn))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(165, 165, 165)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(priceLbl)
-                                        .addComponent(seatsLbl))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(18, 18, 18)
-                                            .addComponent(priceOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(5, 5, 5)
-                                            .addComponent(seatsOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(pricePerTicketLbl)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(pricePerTicketOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(184, 184, 184)
+                                .addGap(133, 133, 133)
+                                .addComponent(pricePerTicketLbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pricePerTicketOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(209, 209, 209)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(standLbl)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(standCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(sectionLbl)
+                                    .addComponent(quantityLbl))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sectionCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(quantityCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(standCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(165, 165, 165)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(computeBtn)
+                                    .addComponent(priceLbl)
+                                    .addComponent(seatsLbl))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(quantityLbl)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(quantityCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(165, 165, 165)
-                                        .addComponent(sectionLbl)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(sectionCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 139, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(seatsOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(priceOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addComponent(clearBtn)))))
+                        .addGap(0, 167, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(BOLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -467,38 +438,35 @@ public class BOGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(BOLbl)
-                .addGap(23, 23, 23)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(standLbl)
-                    .addComponent(standCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                    .addComponent(standCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(standLbl))
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sectionCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sectionLbl))
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(quantityCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quantityLbl))
-                .addGap(57, 57, 57)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(pricePerTicketLbl)
-                            .addComponent(pricePerTicketOutLbl))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(priceLbl)
-                            .addComponent(priceOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(seatsLbl))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(seatsOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(quantityLbl)
+                    .addComponent(quantityCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pricePerTicketLbl)
+                    .addComponent(pricePerTicketOutLbl))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(priceLbl)
+                    .addComponent(priceOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(seatsLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(seatsOutLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(computeBtn)
-                    .addComponent(clearBtn))
-                .addGap(59, 59, 59))
+                    .addComponent(clearBtn)
+                    .addComponent(computeBtn))
+                .addGap(147, 147, 147))
         );
 
         pack();
@@ -506,19 +474,29 @@ public class BOGUI extends javax.swing.JFrame {
 
     private void standCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_standCBActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_standCBActionPerformed
 
     private void computeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_computeBtnActionPerformed
         // TODO add your handling code here:
-      String stand=standCB.getSelectedItem()+"";
-      int section= (int) sectionCB.getSelectedItem();
-      int quantity = (int) quantityCB.getSelectedItem();
-    }//GEN-LAST:event_computeBtnActionPerformed
+         stand = standCB.getSelectedItem() + "";
+         section = Integer.valueOf((String)sectionCB.getSelectedItem());
+         quantity =  Integer.valueOf((String)quantityCB.getSelectedItem());
 
-    /**
-     * @param args the command line arguments
-     */
+        calculatePrice();
+        allocateSeats();
+        pricePerTicketOutLbl.setText(EURO + " " + String.valueOf(df.format(individualPrice)));
+        priceOutLbl.setText(EURO + " " + String.valueOf(df.format(totalPrice)));
+        seatsOutLbl.setText(seatOutput);
+        
+        try {
+            writeFile();
+        } catch (IOException ex) {
+            Logger.getLogger(BOGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_computeBtnActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -533,13 +511,13 @@ public class BOGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BOGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(POSGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BOGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(POSGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BOGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(POSGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BOGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(POSGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -551,7 +529,8 @@ public class BOGUI extends javax.swing.JFrame {
                 Logger.getLogger(BOGUI.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
-}
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BOLbl;
@@ -571,4 +550,3 @@ public class BOGUI extends javax.swing.JFrame {
     private javax.swing.JLabel standLbl;
     // End of variables declaration//GEN-END:variables
 }
-
