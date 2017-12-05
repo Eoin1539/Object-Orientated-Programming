@@ -334,11 +334,12 @@ public class BOGUI extends javax.swing.JFrame {
         sectionCB = new javax.swing.JComboBox<>();
         quantityCB = new javax.swing.JComboBox<>();
         computeBtn = new javax.swing.JButton();
+        resetBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         BOLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BOLbl.setIcon(new javax.swing.ImageIcon("H:\\Year 2\\Semester 1\\Object Orientated Programming\\Project\\POS\\images\\Box Office.png")); // NOI18N
+        BOLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Box Office.png"))); // NOI18N
 
         standLbl.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         standLbl.setText("Stand:");
@@ -368,6 +369,11 @@ public class BOGUI extends javax.swing.JFrame {
 
         clearBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         clearBtn.setText("Clear");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtnActionPerformed(evt);
+            }
+        });
 
         standCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F" }));
         standCB.addActionListener(new java.awt.event.ActionListener() {
@@ -385,6 +391,14 @@ public class BOGUI extends javax.swing.JFrame {
         computeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 computeBtnActionPerformed(evt);
+            }
+        });
+
+        resetBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        resetBtn.setText("Reset Tickets");
+        resetBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetBtnActionPerformed(evt);
             }
         });
 
@@ -432,6 +446,10 @@ public class BOGUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(BOLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(248, 248, 248)
+                .addComponent(resetBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,7 +484,9 @@ public class BOGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clearBtn)
                     .addComponent(computeBtn))
-                .addGap(147, 147, 147))
+                .addGap(18, 18, 18)
+                .addComponent(resetBtn)
+                .addGap(176, 176, 176))
         );
 
         pack();
@@ -497,6 +517,18 @@ public class BOGUI extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_computeBtnActionPerformed
+
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+        // TODO add your handling code here:
+        pricePerTicketOutLbl.setText(EURO + " " +"0.00");
+        priceOutLbl.setText(EURO + " " + "0.00");
+        seatsOutLbl.setText("");
+    }//GEN-LAST:event_clearBtnActionPerformed
+
+    private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
+        // TODO add your handling code here:
+        clearData();
+    }//GEN-LAST:event_resetBtnActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -542,6 +574,7 @@ public class BOGUI extends javax.swing.JFrame {
     private javax.swing.JLabel pricePerTicketOutLbl;
     private javax.swing.JComboBox<String> quantityCB;
     private javax.swing.JLabel quantityLbl;
+    private javax.swing.JButton resetBtn;
     private javax.swing.JLabel seatsLbl;
     private javax.swing.JLabel seatsOutLbl;
     private javax.swing.JComboBox<String> sectionCB;

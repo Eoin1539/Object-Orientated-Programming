@@ -43,25 +43,18 @@
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="myButton" min="-2" pref="228" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="0" pref="98" max="32767" attributes="0"/>
+              <Component id="myButton" min="-2" pref="228" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
           </Group>
+          <Component id="titleLbl" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="104" max="-2" attributes="0"/>
+              <Component id="titleLbl" min="-2" pref="104" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="boxOfficeBtn" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
@@ -136,10 +129,11 @@
         <Property name="text" type="java.lang.String" value="Created By Eoin Kirwan, Karl McSherry &amp; Andrew McBride"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="titleLbl">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="H:\Year 2\Semester 1\Object Orientated Programming\Project\POS\images\Welcome.png"/>
+          <Image iconType="3" name="/images/Welcome.png"/>
         </Property>
       </Properties>
     </Component>

@@ -45,7 +45,7 @@ public class POSGUI extends javax.swing.JFrame {
         barBtn = new javax.swing.JButton();
         myButton = new javax.swing.JButton();
         nameLbl = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        titleLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -83,7 +83,8 @@ public class POSGUI extends javax.swing.JFrame {
         nameLbl.setForeground(new java.awt.Color(255, 255, 255));
         nameLbl.setText("Created By Eoin Kirwan, Karl McSherry & Andrew McBride");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("H:\\Year 2\\Semester 1\\Object Orientated Programming\\Project\\POS\\images\\Welcome.png")); // NOI18N
+        titleLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Welcome.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,20 +103,16 @@ public class POSGUI extends javax.swing.JFrame {
                         .addGap(0, 100, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(myButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(218, 218, 218))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(94, 94, 94))))
+                .addGap(0, 98, Short.MAX_VALUE)
+                .addComponent(myButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(218, 218, 218))
+            .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boxOfficeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -190,8 +187,8 @@ public class POSGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton barBtn;
     private javax.swing.JButton boxOfficeBtn;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton myButton;
     private javax.swing.JLabel nameLbl;
+    private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /*
@@ -112,6 +113,7 @@ public class BarGUI extends javax.swing.JFrame{
     private double cashGiven;
     private double cashOwed;
     private final String EURO;
+    private JFrame frame;
     
     //Amount variables for log
     private int heinekenSold;
@@ -194,6 +196,7 @@ public class BarGUI extends javax.swing.JFrame{
         amountOwedOutLbl = new javax.swing.JLabel();
         clearBtn = new javax.swing.JButton();
         viewBtn = new javax.swing.JButton();
+        exitBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -233,7 +236,7 @@ public class BarGUI extends javax.swing.JFrame{
 
         barLbl.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         barLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        barLbl.setIcon(new javax.swing.ImageIcon("H:\\Year 2\\Semester 1\\Object Orientated Programming\\Project\\POS\\images\\Bar.png")); // NOI18N
+        barLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Bar.png"))); // NOI18N
 
         ciderLbl.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         ciderLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -444,6 +447,14 @@ public class BarGUI extends javax.swing.JFrame{
             }
         });
 
+        exitBtn.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        exitBtn.setText("Exit");
+        exitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -464,40 +475,18 @@ public class BarGUI extends javax.swing.JFrame{
                         .addGap(6, 6, 6)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51)
-                        .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(384, 384, 384)
+                                .addComponent(tcostLbl)
                                 .addGap(18, 18, 18)
-                                .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34)
-                                .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(whiteBtn)
-                                .addGap(52, 52, 52)
-                                .addComponent(redBtn)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(spiritsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(550, 550, 550)
-                                        .addComponent(wineLbl))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(384, 384, 384)
-                                        .addComponent(tcostLbl)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tCostOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(36, 36, 36))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(147, 147, 147)
                                         .addComponent(changeBtn)
@@ -507,8 +496,24 @@ public class BarGUI extends javax.swing.JFrame{
                                         .addComponent(amountOwedOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(clearBtn)
+                                        .addGap(18, 18, 18)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(48, 48, 48)
+                                        .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(viewBtn)
                                         .addGap(18, 18, 18)
-                                        .addComponent(viewBtn))))
+                                        .addComponent(exitBtn))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(spiritsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(wineLbl)
+                                .addGap(212, 212, 212))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addComponent(dietcBtn)
@@ -523,25 +528,40 @@ public class BarGUI extends javax.swing.JFrame{
                                 .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(guinnessLbl)
-                                .addGap(35, 35, 35)
-                                .addComponent(carlsbergLbl)
-                                .addGap(139, 139, 139)
-                                .addComponent(orchardBtn)
-                                .addGap(53, 53, 53)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ciderLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(kopparbergBtn)))))
-                        .addGap(459, 564, Short.MAX_VALUE))))
+                                        .addComponent(whiskeyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(22, 22, 22)
+                                        .addComponent(rumBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(ginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(42, 42, 42)
+                                        .addComponent(tequilaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(132, 132, 132)
+                                        .addComponent(whiteBtn)
+                                        .addGap(57, 57, 57)
+                                        .addComponent(redBtn))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(guinnessLbl)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(carlsbergLbl)
+                                        .addGap(200, 200, 200)
+                                        .addComponent(orchardBtn)
+                                        .addGap(57, 57, 57)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(ciderLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(bulmersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(36, 36, 36)
+                                                .addComponent(kopparbergBtn)))))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(85, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(271, 271, 271)
                 .addComponent(softLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(foodLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(545, 545, 545))
+                .addGap(274, 274, 274))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -551,11 +571,9 @@ public class BarGUI extends javax.swing.JFrame{
                         .addGap(245, 245, 245)
                         .addComponent(changeLbl)
                         .addGap(18, 18, 18)
-                        .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addComponent(barLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(changeOutLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(barLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,10 +581,13 @@ public class BarGUI extends javax.swing.JFrame{
                 .addGap(20, 20, 20)
                 .addComponent(barLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(beerLbl)
-                    .addComponent(ciderLbl))
-                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(beerLbl)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(ciderLbl)
+                        .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(heinekenBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(guinnessLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -598,16 +619,15 @@ public class BarGUI extends javax.swing.JFrame{
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dietcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(hotdBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cokeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(dietcBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(pepsiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fantaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(spriteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(burgerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(chipsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -628,7 +648,8 @@ public class BarGUI extends javax.swing.JFrame{
                             .addComponent(amountOwedOutLbl)
                             .addComponent(clearBtn)
                             .addComponent(viewBtn)
-                            .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(changeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(exitBtn))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -638,8 +659,8 @@ public class BarGUI extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1757, Short.MAX_VALUE)
-                .addGap(328, 328, 328))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(681, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -716,8 +737,6 @@ public class BarGUI extends javax.swing.JFrame{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         cokeSold=cokeSold+1;
-        System.out.println(cokeSold);
-        System.out.println(totalCost);
     }//GEN-LAST:event_cokeBtnActionPerformed
 
     private void pepsiBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepsiBtnActionPerformed
@@ -725,7 +744,6 @@ public class BarGUI extends javax.swing.JFrame{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         pepsiSold=pepsiSold+1;
-        System.out.println(totalCost);
     }//GEN-LAST:event_pepsiBtnActionPerformed
 
     private void whiteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whiteBtnActionPerformed
@@ -772,11 +790,10 @@ public class BarGUI extends javax.swing.JFrame{
 
     private void fantaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fantaBtnActionPerformed
         // TODO add your handling code here:
-        totalCost=totalCost+spirits;
+        totalCost=totalCost+softDrink;
 
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         fantaSold=fantaSold+1;
-        System.out.println(totalCost);
     }//GEN-LAST:event_fantaBtnActionPerformed
 
     private void vodkaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vodkaBtnActionPerformed
@@ -798,7 +815,6 @@ public class BarGUI extends javax.swing.JFrame{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         spriteSold=spriteSold+1;
-        System.out.println(totalCost);
     }//GEN-LAST:event_spriteBtnActionPerformed
 
     private void changeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeBtnActionPerformed
@@ -886,7 +902,6 @@ public class BarGUI extends javax.swing.JFrame{
         totalCost=totalCost+softDrink;
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         dietCokeSold=dietCokeSold+1;
-        System.out.println(totalCost);
     }//GEN-LAST:event_dietcBtnActionPerformed
 
     private void bulmersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulmersBtnActionPerformed
@@ -937,6 +952,15 @@ public class BarGUI extends javax.swing.JFrame{
         tCostOutLbl.setText(EURO+" "+String.valueOf(df.format(totalCost)));
         tequilaSold=tequilaSold+1;
     }//GEN-LAST:event_tequilaBtnActionPerformed
+
+    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
+        // TODO add your handling code here:
+        frame = new JFrame("Exit"); // Creates object
+        if(JOptionPane.showConfirmDialog(frame, "Do you want to exit?", "Bar", 
+                JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION){              
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exitBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -989,6 +1013,7 @@ public class BarGUI extends javax.swing.JFrame{
     private javax.swing.JButton clearBtn;
     private javax.swing.JButton cokeBtn;
     private javax.swing.JButton dietcBtn;
+    private javax.swing.JButton exitBtn;
     private javax.swing.JButton fantaBtn;
     private javax.swing.JLabel foodLbl;
     private javax.swing.JButton ginBtn;

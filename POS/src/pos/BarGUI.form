@@ -27,9 +27,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="jPanel1" pref="1757" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="328" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="1404" max="-2" attributes="0"/>
+              <EmptySpace pref="681" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -74,48 +74,22 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="whiskeyBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Component id="rumBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="ginBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                          <Component id="tequilaBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="burgerBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="384" max="-2" attributes="0"/>
+                                  <Component id="tcostLbl" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="hotdBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="chipsBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="tCostOutLbl" min="-2" pref="158" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="whiteBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="redBtn" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="spiritsLbl" min="-2" pref="204" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
-                                          <Component id="wineLbl" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="burgerBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="384" max="-2" attributes="0"/>
-                                          <Component id="tcostLbl" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="tCostOutLbl" min="-2" pref="158" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
                                           <Component id="changeBtn" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -125,10 +99,32 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="clearBtn" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          <Component id="hotdBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                          <Component id="chipsBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
                                           <Component id="viewBtn" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="exitBtn" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spiritsLbl" min="-2" pref="204" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="wineLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="dietcBtn" min="-2" max="-2" attributes="0"/>
@@ -145,32 +141,50 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="guinnessLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="carlsbergLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-                                  <Component id="orchardBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="ciderLbl" min="-2" pref="109" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
-                                          <Component id="bulmersBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="kopparbergBtn" min="-2" max="-2" attributes="0"/>
+                                          <Component id="whiskeyBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                          <Component id="rumBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="ginBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="tequilaBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                                          <Component id="whiteBtn" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                          <Component id="redBtn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="guinnessLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="carlsbergLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="orchardBtn" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="ciderLbl" min="-2" pref="109" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="bulmersBtn" min="-2" pref="125" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Component id="kopparbergBtn" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="459" pref="564" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="85" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
                   <Component id="softLbl" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="foodLbl" min="-2" pref="86" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="545" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -184,13 +198,10 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="changeOutLbl" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
-                          <Component id="barLbl" min="-2" pref="773" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
+              <Component id="barLbl" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -199,11 +210,16 @@
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="barLbl" min="-2" pref="95" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="beerLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ciderLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="beerLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="ciderLbl" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="heinekenBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
                       <Component id="guinnessLbl" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
@@ -241,17 +257,15 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="hotdBtn" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cokeBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="dietcBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="pepsiBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="fantaBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="spriteBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="burgerBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="chipsBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cokeBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="dietcBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="pepsiBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="fantaBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="spriteBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="burgerBtn" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="hotdBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="chipsBtn" alignment="3" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -278,6 +292,7 @@
                               <Component id="clearBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="viewBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="changeBtn" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="exitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -344,7 +359,7 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="H:\Year 2\Semester 1\Object Orientated Programming\Project\POS\images\Bar.png"/>
+              <Image iconType="3" name="/images/Bar.png"/>
             </Property>
           </Properties>
         </Component>
@@ -673,6 +688,17 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="exitBtn">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Lucida Grande" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Exit"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitBtnActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
