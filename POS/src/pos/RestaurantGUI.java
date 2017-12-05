@@ -49,12 +49,13 @@ public class RestaurantGUI extends javax.swing.JFrame {
     int fBaconCheeseBurger;
     int fDoubleBeefBurger;
     int fBuffaloChickenWrap;
-    int fRoastTurkeyWrap;
+    int fRoastTurkeyWrap ;
     int fPhillyCheeseSteak;
     int fCoffee;
     int fTea;
     int fOrangeJuice;
     int fWater;
+  
     
     /**
      * Creates new form RestaurantGUI
@@ -66,30 +67,31 @@ public class RestaurantGUI extends javax.swing.JFrame {
             FileReader fr = new FileReader(inFile);
             BufferedReader br = new BufferedReader(fr);
         
-            String[] items = new String[100];
+            String[] sold = new String[100];
             String line = "";
             int i=0;
             while(line!=null){
                 line=br.readLine();
-                items[i]=line;
+                sold[i]=line;
                 i=i+1;
             }
         br.close();
-        fNachos = itemCost[0];
-        fChickenWings = itemCost[1];
-        fOnionRings = itemCost[2];
-        fSoup = itemCost[3];
-        fGrilledChickenBurger = itemCost[4];
-        fVeggieBurger = itemCost[5];
-        fBaconCheeseBurger = itemCost[6];
-        fDoubleBeefBurger = itemCost[7];
-        fBuffaloChickenWrap = itemCost[8];
-        fRoastTurkeyWrap = itemCost[9];
-        fPhillyCheeseSteak = itemCost[10];
-        fCoffee = itemCost[11];
-        fTea = itemCost[12];
-        fOrangeJuice = itemCost[13];
-        fWater = itemCost[14];
+       
+        fNachos =Integer.parseInt(sold[0]);
+        fChickenWings  =Integer.parseInt(sold[1]);
+        fOnionRings =Integer.parseInt(sold[2]);
+        fSoup=Integer.parseInt(sold[3]);
+        fGrilledChickenBurger=Integer.parseInt(sold[4]);
+        fVeggieBurger=Integer.parseInt(sold[5]);
+        fBaconCheeseBurger=Integer.parseInt(sold[6]);
+        fDoubleBeefBurger=Integer.parseInt(sold[7]);
+        fBuffaloChickenWrap=Integer.parseInt(sold[8]);
+        fRoastTurkeyWrap =Integer.parseInt(sold[9]);
+        fPhillyCheeseSteak=Integer.parseInt(sold[10]);
+        fCoffee=Integer.parseInt(sold[11]);
+        fTea=Integer.parseInt(sold[12]);
+        fOrangeJuice=Integer.parseInt(sold[13]);
+        fWater=Integer.parseInt(sold[14]);
         }
         catch(IOException e){ // catch any errors
         JOptionPane.showMessageDialog(null, "Sorry, there was an error reading from the file, please try closing and opening the application again "+e);
@@ -153,12 +155,10 @@ public class RestaurantGUI extends javax.swing.JFrame {
         jtxtSubTotal = new javax.swing.JTextField();
         jlblTotal = new javax.swing.JLabel();
         jtxtTotal = new javax.swing.JTextField();
-        jbtnViewLog = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlblRestaurant.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jlblRestaurant.setIcon(new javax.swing.ImageIcon("/Users/eoinkirwan/Documents/College/Year 2/Semester 1/Object Orientated Programming/Project/POS/images/Restaurant.png")); // NOI18N
 
         jlblBurgerMeal.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jlblBurgerMeal.setText("Burger Meal");
@@ -475,13 +475,6 @@ public class RestaurantGUI extends javax.swing.JFrame {
 
         jtxtTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jbtnViewLog.setText("View Log");
-        jbtnViewLog.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnViewLogActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -524,9 +517,7 @@ public class RestaurantGUI extends javax.swing.JFrame {
                                     .addGap(0, 0, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jbtnViewLog)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(32, 195, Short.MAX_VALUE)
                         .addComponent(jbtnReset)
                         .addGap(75, 75, 75)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -665,34 +656,28 @@ public class RestaurantGUI extends javax.swing.JFrame {
                 .addComponent(jlblPayment)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jcomboPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtxtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlblSubTotal))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jlblTax)
-                                    .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(15, 15, 15)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlblTotal))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jbtnTotal)
-                                .addGap(49, 49, 49)))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jbtnReset)
-                            .addComponent(jbtnExit))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jcomboPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlblSubTotal))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlblTax)
+                            .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlblTotal))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbtnViewLog)
-                        .addGap(27, 27, 27))))
+                        .addComponent(jbtnTotal)
+                        .addGap(49, 49, 49)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtnReset)
+                    .addComponent(jbtnExit))
+                .addContainerGap())
         );
 
         pack();
@@ -1165,6 +1150,7 @@ private JFrame frame; // Declare Variable JFrame
         itemCost[13] = Integer.parseInt(jtxtOrangeJuice.getText());
         itemCost[14] = Integer.parseInt(jtxtWater.getText());
         
+        
         String payment = (String) jcomboPayment.getSelectedItem(); // Captures cash, debit and credit card
         
         subTotal = (itemCost[0] * nachos) + (itemCost[1] * chickenWings) + (itemCost[2] * onionRings) + (itemCost[3] * soup)
@@ -1187,6 +1173,22 @@ private JFrame frame; // Declare Variable JFrame
         else{
             JOptionPane.showMessageDialog(null,"You have not entered your card correctly","Restaurant", JOptionPane.OK_OPTION); // Message pop-up if not enough cash entered
         }
+        
+        fNachos = itemCost[0];
+        fChickenWings  = itemCost[1];
+        fOnionRings = itemCost[2];
+        fSoup= itemCost[3];
+        fGrilledChickenBurger= itemCost[4];
+        fVeggieBurger= itemCost[5];
+        fBaconCheeseBurger= itemCost[6];
+        fDoubleBeefBurger= itemCost[7];
+        fBuffaloChickenWrap= itemCost[8];
+        fRoastTurkeyWrap = itemCost[9];
+        fPhillyCheeseSteak=itemCost[10];
+        fCoffee= itemCost[11];
+        fTea= itemCost[12];
+        fOrangeJuice= itemCost[13];
+        fWater= itemCost[14];
         
         File outFile;
         FileWriter fw;
@@ -1215,7 +1217,7 @@ private JFrame frame; // Declare Variable JFrame
             bw.newLine();
             bw.write(String.valueOf(fBuffaloChickenWrap));
             bw.newLine();
-            bw.write(String.valueOf(fRoastTurkeyWrap));
+            bw.write(String.valueOf(fRoastTurkeyWrap ));
             bw.newLine();
             bw.write(String.valueOf(fPhillyCheeseSteak));
             bw.newLine();
@@ -1238,40 +1240,6 @@ private JFrame frame; // Declare Variable JFrame
     private void jtxtDoubleBeefBurgerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDoubleBeefBurgerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtDoubleBeefBurgerActionPerformed
-
-    private void jbtnViewLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnViewLogActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "+---------------------------------------------------+\n"
-            +"|                             Starters                               |\n"
-            +"|----------------------------------------------------|\n"
-            +"| Nachos sold: " + fNachos
-            +"\n"+"| Chicken Wings sold: " + fChickenWings
-            +"\n"+"| Onion Rings: " + fOnionRings
-            +"\n"+"| Soup: " + fSoup
-            +"\n"+"+---------------------------------------------------+\n"
-            +"|                             Burger Meal                              |\n"
-            +"|----------------------------------------------------|\n"
-            +"| Grilled Chicken Burger sold: " + fGrilledChickenBurger
-            +"\n"+"| Veggie Burger sold: " + fVeggieBurger
-            +"\n"+"| Bacon cheese burger sold: " + fBaconCheeseBurger
-            +"\n"+"| Double Beef Burger sold: " + fDoubleBeefBurger
-            +"\n"+"+---------------------------------------------------+\n"
-            +"|                             Sandwich Meal                            \n"
-            +"|----------------------------------------------------|\n"
-            +"| Buffalo Chicken Wrap sold: " + fBuffaloChickenWrap
-            +"\n"+"| Roast Turkey Wrap sold: " + fRoastTurkeyWrap
-            +"\n"+"| Philly Cheese Steak sold: " + fPhillyCheeseSteak
-            +"\n"+"+---------------------------------------------------+\n"
-            +"|                             Drinks                               \n"
-            +"|----------------------------------------------------|\n"
-            +"| Coffee sold: " + fCoffee
-            +"\n"+"| Tea sold: " + fTea
-            +"\n"+"| Orange Juice sold: " + fOrangeJuice
-            +"\n"+"| Water sold: " + fWater
-            +"\n"+"|----------------------------------------------------|\n"
-
-        );
-    }//GEN-LAST:event_jbtnViewLogActionPerformed
 
     private void jtxtTaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTaxActionPerformed
         // TODO add your handling code here:
@@ -1316,7 +1284,6 @@ private JFrame frame; // Declare Variable JFrame
     private javax.swing.JButton jbtnExit;
     private javax.swing.JButton jbtnReset;
     private javax.swing.JButton jbtnTotal;
-    private javax.swing.JButton jbtnViewLog;
     private javax.swing.JCheckBox jchkBaconCheeseBurger;
     private javax.swing.JCheckBox jchkBuffaloChickenWrap;
     private javax.swing.JCheckBox jchkChickenWings;
